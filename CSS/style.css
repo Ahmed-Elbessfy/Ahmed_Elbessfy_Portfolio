@@ -1,0 +1,37 @@
+
+/* Start General Rules */
+
+:root {
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Josefin Slab', 'Helvetica', 'Arial', "Helvetica Neue", sans-serif;
+    font-size: 15px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+i{color: #000;
+height: 2rem;
+width: 2rem;
+display: block;}
+
+/* End General rules */
+
+/* start header rules*/
+
+/* End Header rules */
+
+/* start section rules */
+
+/* End section rules */
+
