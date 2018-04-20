@@ -11,28 +11,37 @@
     <!-- Description-->
     <meta name="description" content="Ahmed T.Elbessfy Portfolio. Front-End Developer">
     <title>Ahmed T.Elbessfy Front-End Developer</title>
-    <!-- Font awesome -->
-    <script src="js/fontawesome-all.min.js"></script>
     <!-- Most Used Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Josefin+Slab|Sacramento|Montserrat+Alternates" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
     <style></style>
-    <script></script>
 </head>
 
 <body>
+    <!--   Start Navbar-->
     <nav>
-        <div class="brand"></div>
+        <div class="logo">
+            <a href="" class="brand"><span>a</span>t</a>
+        </div>
         <div class="nav">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><a href="#home"></a></li>
+                <li><a href="#about"></a></li>
+                <li><a href="#skills"></a></li>
+                <li><a href="#portfolio"></a></li>
+                <li><a href="#services"></a></li>
+                <li><a href="#contact"></a></li>
             </ul>
+        </div>
+    </nav>
+    <!--   End Navbar-->
+    <!--   Start Header-->
+    <header id='home'>
+        <div class="content">
+            <h1>hi, i am ahmed. i am a front-end developer <br> <span></span></h1>
         </div>
         <div class="social">
             <ul>
@@ -43,31 +52,80 @@
                 <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
             </ul>
         </div>
-    </nav>
-    <header>
-        <div class="content">
-            <h1>hi, i am ahmed. i am a front-end developer <br> <span></span></h1>
-        </div>
     </header>
+    <!--   End Header-->
+    <!--   Start Main-->
     <main>
-        <section class="about"></section>
-        <section class="services"></section>
-        <section class="work"></section>
-        <section class="contact">
-            <div class="map"></div>
-            <div class="contact-form"></div>
+        <!--   Start About-->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I know your time is precious so I won't take a lot.</p>
+
+            <h3>Who am I?</h3>
+            <p>My name is Ahmed Taha. I am a Self-Taught Front-End Developer from Egypt. I got my BSc in Structural Engineering back in 2014. At the beginning of 2017, I decided to learn Web Development. What made me do this? go to WHY AM I DOING THIS? question.</p>
+
+            <h3>What am I doing?</h3>
+            <p>I convert your design into a code using multiple technologies.</p>
+
+            <h3>Why am I doing this? </h3>
+            <p>Everything started with a curiosity for Programming, Coding &amp; those black screens. On the other hand, I didn't like to be a Structural Engineer for the rest of my life. So I decided to learn Web Development.</p>
+
+            <h3>What's my main goal?</h3>
+
+            <p>I aim to be a Full-Stack Developer. For now, I only managed the Front-End stuff but I am still learning to achieve my goal and I think learning never stops and any human dies at the moment he stops learning new things or stops keeping growing. That's why I always try to get out of my comfort zone for learning and gaining new skills. my best quote is : </p>
+            <blockquote> life begins at the end of your comfort zone.</blockquote> <cite>neale donald walsch</cite>
+
+            <h3>What can I offer you?</h3>
+            <p>I offer you website development with full support and more other features. Find more at <a href="#services">SERVICES</a>.</p>
+
+            <h3>How can we communicate?</h3>
+            <p>My preferred way is via Email but you can reach me on Social websites or via phone on <a href="tel:00201113305408">00201113305408</a>.</p>
+
+            <h2>Am I currently available for Hiring?</h2>
+            <p>Yes, I am also available for full-time positions, remote positions and freelance tasks. Relocating is available too. Want to get to me? <a href="#contact">here</a></p>
+
         </section>
-        <footer>
-            <div class="nav">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+        <!--   End About Me-->
+        <!--   Start Services-->
+        <section id="services"></section>
+        <!--   End Services-->
+        <!--   Start Work-->
+        <section id="work">
+
+        </section>
+        <!--   End Work-->
+        <!--   Start Contact-->
+        <section id="contact">
+            <!--   Start Map-->
+            <!--   End Map-->
+            <!--   Start Contact-Form-->
+            <div class="contact-form">
+                <h2>want to get to work</h2>
+                <p>I am currently accepted new projects and love to hear from about yours. please take a few minutes to tell me about it. </p>
+                <button class="hd-form-activate">get started</button>
+                <div class="hd-form">
+                    <p class="brand">at</p>
+                    <h2>Ok, just few quick questions.</h2>
+                    <p>just introduce yourself and how can I help you and I will get in touch as soon as possible. You expect to hear from me in a day or so.</p>
+                    <form>
+                        <input type="text" placeholder="Name *" name="clientName" required>
+                        <input type="email" name="clientEmail" placeholder="Email address *" required>
+                        <input type="text" name="clientPhone" placeholder="Phone number if available">
+                        <input type="text" name="website" placeholder="Website if available">
+                        <textarea name="ClientMessage" placeholder="Tell me how can I help you ... *" height="50em" required></textarea>
+                        <!--                        <input type="text" name="_gotcha" style="display:none">-->
+                        <input type="submit" value="Send" class="button button-ghost-white">
+                        <p class="required">* Required</p>
+
+                    </form>
+                    <a href="" class="hd-form-close">close</a>
+                </div>
             </div>
+            <!--   End Contact-Form-->
+        </section>
+        <!--   End Contact-->
+        <!--   Start Footer-->
+        <footer>
             <div class="social">
                 <ul>
                     <li><a href="https://twitter.com/The_Engineer92" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -79,7 +137,9 @@
             </div>
             <p></p>
         </footer>
+        <!--   End Footer-->
     </main>
+    <!--   End Main-->
 </body>
 
 </html>

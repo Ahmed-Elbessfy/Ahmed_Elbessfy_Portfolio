@@ -1,7 +1,13 @@
-
 /* Start General Rules */
 
 :root {
+    --main-bg: #fefefe;
+    --main-color: #0c0233;
+    --yellow: #ffd710;
+    --heading: #56A5CE;
+    --daa:#252A30;
+    --light-blue: #95f4ff;
+
 }
 
 * {
@@ -17,15 +23,145 @@ html {
 }
 
 body {
+    padding-left: 7rem;
+    background-color: var(--main-bg);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.brand {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
 }
 
 /* End General rules */
 
-/* start header rules*/
+/* Start Nav rules*/
+
+nav {
+    /*
+    background-color: #333;
+    background-color: #171717;
+    background-color: #07002c;
+*/
+    background-color: var(--main-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 15px 5px;
+    display: grid;
+    text-align: center;
+
+}
+
+nav .logo {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid var(--yellow);
+    margin-bottom: 20%;
+    align-self: start;
+}
+nav .logo a{
+    color: var(--yellow);
+}
+nav .logo span {
+    font-family: "sacramento";
+}
+
+nav .nav ul li a {
+    display: block;
+    margin-top: 2rem;
+    color: var(--yellow);
+    height: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+nav .nav ul li a:hover:before {
+    display: block;
+}
+
+nav .nav ul li a:hover:after {
+    display: none;
+}
+
+nav .nav ul li a:before {
+    font-size: 0.7rem;
+    display: none;
+}
+
+nav .nav ul li a:after {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-size: 1.4rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav .nav ul li a[href="#home"]:before {
+    content: "home";
+}
+
+nav .nav ul li a[href="#home"]:after {
+    content: "\f015";
+}
+
+nav .nav ul li a[href="#about"]:before {
+    content: "about";
+}
+
+nav .nav ul li a[href="#about"]:after {
+    content: "\f21b";
+}
+
+nav .nav ul li a[href="#skills"]:before {
+    content: "skills";
+}
+
+nav .nav ul li a[href="#skills"]:after {
+    content: "\f085";
+}
+
+nav .nav ul li a[href="#portfolio"]:before {
+    content: "portfolio";
+}
+
+nav .nav ul li a[href="#portfolio"]:after {
+    content: "\f06e";
+}
+
+nav .nav ul li a[href="#services"]:before {
+    content: "services";
+}
+
+nav .nav ul li a[href="#services"]:after {
+    content: "\f2b5";
+}
+
+nav .nav ul li a[href="#contact"]:before {
+    content: "contact";
+}
+
+nav .nav ul li a[href="#contact"]:after {
+    content: "\f095";
+}
+
+/* End Nav rules */
+
+/* Start Header rules*/
 
 /* End Header rules */
 
-/* start section rules */
+/* Start section rules */
 
 /* End section rules */
-
