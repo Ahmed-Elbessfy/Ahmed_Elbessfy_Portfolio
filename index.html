@@ -12,12 +12,13 @@
     <meta name="description" content="Ahmed T.Elbessfy Portfolio. Front-End Developer">
     <title>Ahmed T.Elbessfy Front-End Developer</title>
     <!-- Most Used Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Josefin+Slab|Sacramento|Montserrat+Alternates" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway|Sacramento|Montserrat+Alternates" rel="stylesheet">
     <!-- Font awesome -->
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
     <style></style>
+    <script src="js/typed.min.js"></script>
 </head>
 
 <body>
@@ -31,17 +32,10 @@
                 <li><a href="#home"></a></li>
                 <li><a href="#about"></a></li>
                 <li><a href="#skills"></a></li>
-                <li><a href="#portfolio"></a></li>
+                <li><a href="#myWork"></a></li>
                 <li><a href="#services"></a></li>
                 <li><a href="#contact"></a></li>
             </ul>
-        </div>
-    </nav>
-    <!--   End Navbar-->
-    <!--   Start Header-->
-    <header id='home'>
-        <div class="content">
-            <h1>hi, i am ahmed. i am a front-end developer <br> <span></span></h1>
         </div>
         <div class="social">
             <ul>
@@ -50,8 +44,17 @@
                 <li><a href="https://github.com/Ahmed-Elbessfy" target="_blank"><i class="fab fa-github-alt"></i></a></li>
                 <li><a href="https://codepen.io/Ahmedelbessfy/" target="_blank"><i class="fab fa-codepen"></i></a></li>
                 <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
+                <li><a href="" target="_blank"><i class="fab fa-stack-overflow">FCC</i></a></li>
             </ul>
         </div>
+    </nav>
+    <!--   End Navbar-->
+    <!--   Start Header-->
+    <header id='home'>
+        <div class="content">
+            <h1>hi, i am ahmed. i am a front-end developer. I build <br> <span class="typed"></span></h1>
+        </div>
+
     </header>
     <!--   End Header-->
     <!--   Start Main-->
@@ -60,29 +63,38 @@
         <section id="about">
             <h2>About Me</h2>
             <p>I know your time is precious so I won't take a lot.</p>
+            <ul>
+                <li>
+                    <h3>What am I doing?</h3>
+                    <p>I convert your design into a code using multiple technologies.</p>
 
-            <h3>Who am I?</h3>
-            <p>My name is Ahmed Taha. I am a Self-Taught Front-End Developer from Egypt. I got my BSc in Structural Engineering back in 2014. At the beginning of 2017, I decided to learn Web Development. What made me do this? go to WHY AM I DOING THIS? question.</p>
+                </li>
+                <li>
+                    <h3>Why am I doing this? </h3>
+                    <p>Everything started with a curiosity for Programming, Coding &amp; those black screens. On the other hand, I didn't like to be a Structural Engineer for the rest of my life. So I decided to learn Web Development.</p>
 
-            <h3>What am I doing?</h3>
-            <p>I convert your design into a code using multiple technologies.</p>
+                </li>
+                <li>
+                    <h3>What's my main goal?</h3>
+                    <p>I aim to be a Full-Stack Developer. For now, I only managed the Front-End stuff but I am still learning to achieve my goal and I think learning never stops and any human dies at the moment he stops learning new things or stops keeping growing. That's why I always try to get out of my comfort zone for learning and gaining new skills. my best quote is : </p>
+                    <blockquote> life begins at the end of your comfort zone.</blockquote> <cite>neale donald walsch</cite>
 
-            <h3>Why am I doing this? </h3>
-            <p>Everything started with a curiosity for Programming, Coding &amp; those black screens. On the other hand, I didn't like to be a Structural Engineer for the rest of my life. So I decided to learn Web Development.</p>
+                </li>
+                <li>
+                    <h3>What can I offer you?</h3>
+                    <p>I offer you website development with full support and more other features. Find more at <a href="#services">SERVICES</a>.</p>
 
-            <h3>What's my main goal?</h3>
+                </li>
+                <li>
+                    <h3>How can we communicate?</h3>
+                    <p>My preferred way is via Email but you can reach me on Social websites or via phone on <a href="tel:00201113305408">00201113305408</a>.</p>
+                </li>
+                <li>
+                    <h3>Am I currently available for Hiring?</h3>
+                    <p>Yes, I am also available for full-time positions, remote positions and freelance tasks. Relocating is available too. Want to get to me? <a href="#contact">here</a></p>
 
-            <p>I aim to be a Full-Stack Developer. For now, I only managed the Front-End stuff but I am still learning to achieve my goal and I think learning never stops and any human dies at the moment he stops learning new things or stops keeping growing. That's why I always try to get out of my comfort zone for learning and gaining new skills. my best quote is : </p>
-            <blockquote> life begins at the end of your comfort zone.</blockquote> <cite>neale donald walsch</cite>
-
-            <h3>What can I offer you?</h3>
-            <p>I offer you website development with full support and more other features. Find more at <a href="#services">SERVICES</a>.</p>
-
-            <h3>How can we communicate?</h3>
-            <p>My preferred way is via Email but you can reach me on Social websites or via phone on <a href="tel:00201113305408">00201113305408</a>.</p>
-
-            <h2>Am I currently available for Hiring?</h2>
-            <p>Yes, I am also available for full-time positions, remote positions and freelance tasks. Relocating is available too. Want to get to me? <a href="#contact">here</a></p>
+                </li>
+            </ul>
 
         </section>
         <!--   End About Me-->
@@ -104,7 +116,9 @@
                 <p>I am currently accepted new projects and love to hear from about yours. please take a few minutes to tell me about it. </p>
                 <button class="hd-form-activate">get started</button>
                 <div class="hd-form">
-                    <p class="brand">at</p>
+                    <div class="logo">
+                        <a href="" class="brand"><span>a</span>t</a>
+                    </div>
                     <h2>Ok, just few quick questions.</h2>
                     <p>just introduce yourself and how can I help you and I will get in touch as soon as possible. You expect to hear from me in a day or so.</p>
                     <form>
@@ -124,22 +138,35 @@
             <!--   End Contact-Form-->
         </section>
         <!--   End Contact-->
-        <!--   Start Footer-->
-        <footer>
-            <div class="social">
-                <ul>
-                    <li><a href="https://twitter.com/The_Engineer92" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/ahmed-taha-2273ab123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://github.com/Ahmed-Elbessfy" target="_blank"><i class="fab fa-github-alt"></i></a></li>
-                    <li><a href="https://codepen.io/Ahmedelbessfy/" target="_blank"><i class="fab fa-codepen"></i></a></li>
-                    <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
-                </ul>
-            </div>
-            <p></p>
-        </footer>
-        <!--   End Footer-->
     </main>
     <!--   End Main-->
+    <!--   Start Footer-->
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="https://twitter.com/The_Engineer92" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ahmed-taha-2273ab123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/Ahmed-Elbessfy" target="_blank"><i class="fab fa-github-alt"></i></a></li>
+                <li><a href="https://codepen.io/Ahmedelbessfy/" target="_blank"><i class="fab fa-codepen"></i></a></li>
+                <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
+            </ul>
+        </div>
+        <p></p>
+    </footer>
+    <!--   End Footer-->
+    <script></script>
+    <script>
+        var typed = new Typed('.typed', {
+            strings: ["user interfaces", 'landing pages', ],
+            typeSpeed: 100,
+            startDelay: 500,
+            backDelay: 1500,
+            backSpeed: 100,
+            loop: true,
+            cursorChar: "_",
+        });
+
+    </script>
 </body>
 
 </html>
