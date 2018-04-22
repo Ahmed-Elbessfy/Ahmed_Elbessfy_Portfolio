@@ -1,13 +1,15 @@
 /* Start General Rules */
 
 :root {
-    --main-bg: #fefefe;
+    /*    --main-bg: #fefefe;*/
+    --main-bg: #f3f3f3;
     --main-color: #0c0233;
     --yellow: #ffd710;
     --heading: #56A5CE;
     --link: #f27373;
     --light-blue: #95f4ff;
-
+    --dark-shadow: 3px 3px 5px #000;
+    --light-shadow: 3px 3px 5px #fff;
 }
 
 * {
@@ -23,7 +25,7 @@ html {
 }
 
 body {
-    /*    padding-left: 4.5rem;*/
+    color: var(--main-color);
     background-color: var(--main-bg);
 }
 
@@ -32,12 +34,6 @@ h2,
 h3 {
     text-transform: capitalize;
     color: var(--heading);
-}
-
-h1 {
-    font-weight: 600;
-    font-size: 3rem;
-    font-family: 'Fredericka the Great';
 }
 
 h2,
@@ -71,15 +67,20 @@ a {
 .logo {
     width: 100%;
     max-width: 58px;
-    height: 50px;
-    padding-top: 7px;
-    border-top: 2px solid var(--yellow);
-    border-bottom: 2px solid var(--yellow);
+    height: 60px;
+    padding-top: 10px;
+    border: 2px solid var(--yellow);
     align-self: start;
     justify-self: center;
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    background-color: var(--main-color);
+}
 
+.logo:hover {
+    font-size: 2.2rem;
+    padding-top: 6px;
 }
 
 .logo a {
@@ -87,6 +88,7 @@ a {
 }
 
 .logo span {
+    font-weight: 100;
     font-family: "sacramento";
 }
 
@@ -95,7 +97,7 @@ a {
 /* Start Nav rules*/
 
 nav {
-    background-color: var(--main-color);
+    background-color: var(--main-bg);
     position: fixed;
     left: 0;
     top: 5%;
@@ -107,18 +109,30 @@ nav {
     min-height: 50rem;
     max-height: 90rem;
     border-radius: 0 20px 20px 0;
+    z-index: 5;
+}
+
+nav.contrast {
+    background-color: var(--main-color);
 }
 
 nav .nav ul li a {
     display: block;
     margin-top: 2rem;
-    color: var(--yellow);
+    color: var(--main-color);
     height: 2rem;
     text-transform: capitalize;
     font-weight: 900;
     border-right: 2px solid var(--yellow);
     border-left: 2px solid var(--yellow);
     padding: .3rem 0.1rem;
+}
+
+nav.contrast .nav ul li a {
+    color: var(--yellow);
+    border-right: 2px solid var(--yellow);
+    border-left: 2px solid var(--yellow);
+
 }
 
 nav .nav ul li a:hover:before {
@@ -198,34 +212,46 @@ nav .nav ul li a[href="#contact"]:after {
 nav .social {
     align-self: end;
 }
+
 .social a {
     display: block;
-    color: var(--yellow);
     font-weight: 900;
     padding: .3rem;
     font-size: 1.2rem;
 }
+
 
 /* End Nav rules */
 
 /* Start Header rules*/
 
 header {
-    min-height: 50rem;
-    background-color: #888;
+    min-height: 100vh;
     padding: 10rem;
-    text-align: center;
-    background-color: var(--light-blue)
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../media/header%20(10).jpeg") center center no-repeat;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
 
-header h1{
-    color: var(--main-color);
-    
+header h1 {
+    color: var(--main-bg);
+    text-shadow: var(--dark-shadow);
+    text-align: center;
+    max-width: 40rem;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: 'Fredericka the Great';
 }
+
 header h1 span {
+    color: var(--yellow);
+}
+
+header h1 span.typed {
     text-transform: uppercase;
 }
-
 
 /* End Header rules */
 
@@ -242,6 +268,7 @@ main {
 section {
     border: 2px solid #000;
     display: grid;
+    text-align: center;
 }
 
 /* End Main rules */
@@ -249,11 +276,13 @@ section {
 /* Start About Me rules */
 
 section#about {
-    padding: 4rem 6rem;
-    text-align: center;
-    max-width: 60rem;
+    padding: 6rem;
+    max-width: 90rem;
     margin-top: -10rem;
     background-color: var(--main-bg);
+    border-radius: 10rem;
+    box-shadow: inset 0 0 20px 17px #eaeaea;
+    border: none;
 }
 
 #about > p {

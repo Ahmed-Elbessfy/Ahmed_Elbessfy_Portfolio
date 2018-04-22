@@ -52,9 +52,10 @@
     <!--   Start Header-->
     <header id='home'>
         <div class="content">
-            <h1>hi, i am ahmed. i am a front-end developer. I build <br> <span class="typed"></span></h1>
+            <h1>hi, I am <span>Ahmed</span>. I am a front-end developer. I build <br>
+                <span class="typed"></span>
+            </h1>
         </div>
-
     </header>
     <!--   End Header-->
     <!--   Start Main-->
@@ -82,28 +83,99 @@
                 </li>
                 <li>
                     <h3>What can I offer you?</h3>
-                    <p>I offer you website development with full support and more other features. Find more at <a href="#services">SERVICES</a>.</p>
+                    <p>As I am a perfectionist, I will finish your work as <span>perfect</span> as I can and with <span>as soon as possible</span>. Take a look at my <a href="#services">SERVICES</a>.</p>
+
+                </li>
+                <li>
+                    <h3>what tools, frameworks &amp; Libraries do use?</h3>
+                    <p>I use whatever it takes to make the website. Even if something I don't know about, I find a tutorial and learn about it.</p>
 
                 </li>
                 <li>
                     <h3>How can we communicate?</h3>
-                    <p>My preferred way is via Email but you can reach me on Social websites or via phone on <a href="tel:00201113305408">00201113305408</a>.</p>
+                    <p>My preferred way is via Email but you can reach me on Social websites or via phone on <a href="tel:00201113305408">00201113305408</a>. You can also call me to grab a cup of coffee and talk. life isn't only about business. </p>
                 </li>
                 <li>
                     <h3>Am I currently available for Hiring?</h3>
-                    <p>Yes, I am also available for full-time positions, remote positions and freelance tasks. Relocating is available too. Want to get to me? <a href="#contact">here</a></p>
+                    <p>Yes, I am also available for full-time positions, remote positions and freelance tasks. Relocating is available too. Want to get in touch? <a href="#contact">here</a></p>
 
                 </li>
             </ul>
 
         </section>
         <!--   End About Me-->
+        <!--   Start Skills-->
+        <section id="skills">
+            <h2>my skills</h2>
+            <p>Those are temporary and constantly growing</p>
+            <ul>
+                <li>
+                    <h3>strong knowledgeable</h3>
+                    <p><span>html5</span><span>css3</span><span>bootstrap</span><span>jquery</span><span>responsive design</span></p>
+                </li>
+                <li>
+                    <h3>knowledgeable</h3>
+                    <p><span>javascript</span><span>git</span><span>api</span><span>ajax</span></p>
+                </li>
+                <li>
+                    <h3>future goals</h3>
+                    <p><span>materialize</span><span>angular</span><span>react</span><span>node</span><span>php</span><span>mongodb</span><span>mysql</span>
+                        <span>python</span></p>
+                </li>
+            </ul>
+        </section>
+        <!--   End Skills-->
         <!--   Start Services-->
-        <section id="services"></section>
+        <section id="services">
+            <h2>services</h2>
+            <p>All services are provided with <span>High Quality, Speed Delivery and Full Support even after ending contract</span></p>
+            <ul>
+                <li>
+                    <h3>convert desing into code</h3>
+                    <p> I will convert your design into code using <span>HTML5, CSS3 and some Javascript</span>. I can also use libraries and frameworks like <span>Bootstrap, JQuery</span>. The final result will be a <span>full responsive</span> website which is <span>compatible with all browsers</span> with clean &amp; well-organised code.
+                    </p>
+                </li>
+                <li>
+                    <h3>Design &amp; code a website</h3>
+                    <p> Don't have a design? don't worry! I will design your website with a <span>simple &amp; attractive</span> user interface. Once I get your acceptance, I will convert this into code.
+                    </p>
+                </li>
+                <li>
+                    <h3>landing page</h3>
+                    <p> You will have a landing page with <span>attractive and special</span> design helping you <span>grow your business</span> and get in touch with your <span>customers</span>.
+                    </p>
+                </li>
+                <li>
+                    <h3>improvement &amp; solving issues</h3>
+                    If you have some issues in your website or you need to increase its performance or loading speed, just get in touch and I will help you.
+                </li>
+            </ul>
+        </section>
         <!--   End Services-->
         <!--   Start Work-->
         <section id="work">
-
+            <div class="portfolio">
+                <h2>previous works</h2>
+                <p></p>
+                <div class="sample">
+                    <div class="image">
+                        <img src="" alt="">
+                        <p>skill1</p>
+                        <p>skill2</p>
+                        <p>skill3</p>
+                        <p>skill4</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, tempora!</p>
+                </div>
+            </div>
+            <!--
+            <div class="testimonial">
+            </div>
+-->
+            <!--
+            <div class="work-experience">
+            </div>
+-->
         </section>
         <!--   End Work-->
         <!--   Start Contact-->
@@ -157,7 +229,11 @@
     <script></script>
     <script>
         var typed = new Typed('.typed', {
-            strings: ["user interfaces", 'landing pages', ],
+            strings: ["awesome user interfaces.", 'attractive landing pages.',
+                'high quality full responsive websites.',
+                /* 'Web applications'*/
+
+            ],
             typeSpeed: 100,
             startDelay: 500,
             backDelay: 1500,
@@ -167,6 +243,8 @@
         });
 
     </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 
 </html>
