@@ -41,3 +41,21 @@
 //            //    $("html").animate({
 //            //        scrollTop: 0
 //            //    }, 600);});
+
+
+//Form controls
+//
+//$('#hd-form-activate').on('click', function () {
+//    //    $('.hd-form').css('width', '100%');
+//    //    $('.hd-form').css('height', '100%');
+//    $(".hd-form").fadeIn(5000, function () {
+//        $('.hd-form').css('display', 'grid');
+//    });
+//});
+//
+//$('#hd-form-close').on('click', function () {
+//    //    $('.hd-form').css('display', 'none');
+//    $(".hd-form").fadeIn(5000, function () {
+//        $(this).css('display', 'none');
+//    });
+//});

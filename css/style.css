@@ -309,7 +309,6 @@ nav .social {
 
 header {
     min-height: 100vh;
-    padding: 10rem;
     background: linear-gradient(hsla(247, 90%, 20%, 0.4), hsla(247, 90%, 20%, 0.4)), url("../media/header%20(2).jpeg") center center no-repeat;
     background-size: cover;
     display: grid;
@@ -368,7 +367,7 @@ section {
 }
 
 section > p {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 section ul {
@@ -650,14 +649,135 @@ section#services ul li:last-child:after {
 
 /* End Work rules */
 
+/* Start contact rules */
+
+#contact {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Start contact form rules */
+
+.contact-form {
+    border-right: 1px solid var(--border-color);
+    padding-right: 3rem;
+}
+
+.contact-form a {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.contact-form > .btn {
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    display: none;
+}
+
+.contact-form > .btn:hover {
+    background-color: var(--yellow);
+    color: var(--main-color);
+    border-color: var(--yellow);
+}
+
+/* Start hd-form rules */
+
+.hd-form {
+    background-color: rgba(12, 2, 51, 0.96);
+    color: var(--yellow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 2rem;
+    align-content: center;
+    justify-items: center;
+    padding: 10rem;
+    display: none;
+    transition: 0.2s 1s;
+}
+
+.hd-form .logo {
+    max-width: 55px;
+}
+
+.hd-form > p {
+    max-width: 80%;
+}
+
+form {
+    min-width: 200px;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid var(--yellow);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.hd-form input,
+.hd-form textarea,
+.hd-form input.btn {
+    padding: 1rem;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid var(--yellow);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.hd-form input.btn {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--main-bg);
+    border: 2px solid var(--yellow);
+    border-radius: 2rem;
+    margin: 0.7rem;
+    grid-column: 1/-1;
+    min-width: 20rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hd-form textarea,
+.hd-form p {
+    grid-column: 1/-1;
+}
+
+a#hd-form-close {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    padding: 0.1rem 0.4rem;
+    font-size: 1.8rem;
+}
+
+/* End hd-form rules */
+
+/* End contact form rules */
+
+/* Start Map rules */
+
+/* End Map rules */
+
+/* End contact rules */
+
 /* Start About Me rules */
 
-/* End About Me rules */
+footer {
 
-/* Start About Me rules */
-
-/* End About Me rules */
-
-/* Start About Me rules */
+    background-color: var(--main-color);
+    color: var(--yellow);
+    height: 3rem;
+    width: 100%;
+}
 
 /* End About Me rules */

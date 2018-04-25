@@ -43,8 +43,8 @@
                 <li><a href="https://www.linkedin.com/in/ahmed-taha-2273ab123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://github.com/Ahmed-Elbessfy" target="_blank"><i class="fab fa-github-alt"></i></a></li>
                 <li><a href="https://codepen.io/Ahmedelbessfy/" target="_blank"><i class="fab fa-codepen"></i></a></li>
-                <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
-                <li><a href="" target="_blank"><i class="fab fa-stack-overflow">FCC</i></a></li>
+                <!--                <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>-->
+                <li><a href="https://www.freecodecamp.org/ahmed-elbessfy" target="_blank"><i class="fab fa-free-code-camp"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -284,16 +284,17 @@
         <!--   End Work-->
         <!--   Start Contact-->
         <section id="contact">
-            <!--   Start Map-->
-            <!--   End Map-->
             <!--   Start Contact-Form-->
             <div class="contact-form">
-                <h2>want to get to work</h2>
-                <p>I am currently accepting new projects and love to hear from about yours. please take a few minutes to tell me about it. </p>
-                <button class="hd-form-activate">get started</button>
+                <h2>want to get to me ?</h2>
+                <p>I am currently accepting new projects and would love to hear about yours. Please take a few minutes to tell me about your project. Choose how to contact:
+                    <br> Email : <a href="mailto:ahmedelbessfy@gmail.com">Email</a><br>Cell Phone : <a href="tel:0020113305408">00201113305408</a> <br>Get to me on Skype : <a href="skype:live:6b1edf1e9295efa?chat">Skype</a>
+                </p>
+                <!--<p>I am currently accepting new projects and love to hear about yours. Please take a few minutes to tell me about it. </p>-->
+                <button id="hd-form-activate" class="btn">get started</button>
                 <div class="hd-form">
                     <div class="logo">
-                        <a href="" class="brand"><span>a</span>t</a>
+                        <a href="#home" class="brand"><span>a</span>t</a>
                     </div>
                     <h2>Ok, just few quick questions.</h2>
                     <p>just introduce yourself and how can I help you and I will get in touch as soon as possible. You expect to hear from me in a day or so.</p>
@@ -304,14 +305,18 @@
                         <input type="text" name="website" placeholder="Website if available">
                         <textarea name="ClientMessage" placeholder="Tell me how can I help you ... *" height="50em" required></textarea>
                         <!--                        <input type="text" name="_gotcha" style="display:none">-->
-                        <input type="submit" value="Send" class="button button-ghost-white">
+                        <input type="submit" class="btn" value="Send" class="button button-ghost-white">
                         <p class="required">* Required</p>
 
                     </form>
-                    <a href="" class="hd-form-close">close</a>
+                    <a href="" id="hd-form-close">X</a>
                 </div>
             </div>
             <!--   End Contact-Form-->
+            <!--   Start Map-->
+            <div class="location"></div>
+            <!--   End Map-->
+
         </section>
         <!--   End Contact-->
     </main>
@@ -324,13 +329,14 @@
                 <li><a href="https://www.linkedin.com/in/ahmed-taha-2273ab123/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="https://github.com/Ahmed-Elbessfy" target="_blank"><i class="fab fa-github-alt"></i></a></li>
                 <li><a href="https://codepen.io/Ahmedelbessfy/" target="_blank"><i class="fab fa-codepen"></i></a></li>
-                <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
+                <!--                <li><a href="https://stackoverflow.com/users/7371096/ahmed-elbessfy?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>-->
             </ul>
         </div>
         <p></p>
     </footer>
     <!--   End Footer-->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
     <script>
         var typed = new Typed('.typed', {
             strings: ["awesome user interfaces.", 'attractive landing pages.',
@@ -345,43 +351,12 @@
             loop: true,
             cursorChar: "_",
         });
-        //        $('header a').on('click', function() {
-        //            $('#contact').scrollIntoView({
-        //                behavior: 'smooth'
-        //            });
-        //        });
-        //        $(document).ready(function() {
-        //            // Add smooth scrolling to all links
-        //            $("a").on('click', function(event) {
-        //
-        //                // Make sure this.hash has a value before overriding default behavior
-        //                if (this.hash !== "") {
-        //                    // Prevent default anchor click behavior
-        //                    event.preventDefault();
-        //
-        //                    // Store hash
-        //                    var hash = this.hash;
-        //
-        //                    // Using jQuery's animate() method to add smooth page scroll
-        //                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        //                    $('html, body').animate({
-        //                        scrollTop: $(hash).offset().top
-        //                    }, 800, function() {
-        //
-        //                        // Add hash (#) to URL when done scrolling (default click behavior)
-        //                        window.location.hash = hash;
-        //                    });
-        //                } // End if
-        //            });
-        //        });
         /*global $, window, console */
         $('a[href*="#"]')
             // Remove links that don't actually link to anything
             .not('[href="#"]')
             .not('[href="#0"]')
             .click(function(event) {
-                //                console.log(this.hash);
-                // if ( // location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && // location.hostname == this.hostname // ) {                    console.log(location.pathname);
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 // Does a scroll target exist?
@@ -389,7 +364,7 @@
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 700, function() {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -402,8 +377,12 @@
                         };
                     });
                 }
-                //                }
             });
+        $("body").niceScroll({
+            cursorcolor: "#0c0223",
+            cursorwidth: "8px",
+            cursorborder: "0",
+        });
 
     </script>
     <script src="js/portfolio.js"></script>
