@@ -78,9 +78,9 @@ a {
 }
 
 .logo {
-    width: 100%;
+    width: 57px;
     height: 57px;
-    padding-top: 6px;
+    padding-top: 4px;
     border: 2px solid var(--yellow);
     align-self: start;
     justify-self: center;
@@ -192,7 +192,7 @@ nav {
     left: 10px;
     top: 5%;
     padding: 35px 10px;
-    width: 5.2rem;
+    width: 5.5rem;
     display: grid;
     grid-gap: 3rem;
     justify-content: center;
@@ -210,6 +210,7 @@ nav .nav ul li a {
     margin-top: 2rem;
     color: var(--yellow);
     height: 2.5rem;
+    width: 4.3rem;
     text-transform: capitalize;
     font-weight: 900;
     border-right: 2px solid var(--border-color);
@@ -266,6 +267,7 @@ nav .nav ul li a[href="#skills"]:after {
 
 nav .nav ul li a[href="#work"]:before {
     content: "my work";
+    padding-top: 0;
 }
 
 nav .nav ul li a[href="#work"]:after {
@@ -295,7 +297,7 @@ nav .social {
 }
 
 .social a {
-    display: block;
+    display: inline-block;
     font-weight: 900;
     padding: .3rem;
     font-size: 1.2rem;
@@ -313,8 +315,11 @@ header {
     background-size: cover;
     display: grid;
     align-content: center;
-    justify-content: center;
     text-align: center;
+}
+
+header .content {
+    justify-self: center;
 }
 
 header h1 {
@@ -363,7 +368,7 @@ section {
     text-align: center;
     width: 95%;
     max-width: 110rem;
-    padding: 4rem;
+    padding: 6rem 4rem;
 }
 
 section > p {
@@ -696,12 +701,8 @@ section#services ul li:last-child:after {
     align-content: center;
     justify-items: center;
     padding: 10rem;
-    display: none;
     transition: 0.2s 1s;
-}
-
-.hd-form .logo {
-    max-width: 55px;
+    display: none;
 }
 
 .hd-form > p {
@@ -778,6 +779,10 @@ footer {
     color: var(--yellow);
     height: 3rem;
     width: 100%;
+}
+
+footer ul li {
+    display: inline-block;
 }
 
 /* End About Me rules */
