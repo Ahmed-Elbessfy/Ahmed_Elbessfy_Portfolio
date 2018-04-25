@@ -50,7 +50,8 @@ h1 {
     font-size: 4rem;
     font-weight: 500;
     font-family: 'Fredericka the Great';
-    min-height: 500px;
+    height: 570px;
+    text-align: left;
 }
 
 h2 {
@@ -110,6 +111,7 @@ nav {
     padding: 35px 10px;
     width: 6rem;
     display: grid;
+    grid-gap: 3rem;
     text-align: center;
     min-width: 4.6rem;
     min-height: 50rem;
@@ -123,12 +125,11 @@ nav .nav ul li a {
     display: block;
     margin-top: 2rem;
     color: var(--yellow);
-    height: 2rem;
+    height: 2.5rem;
     text-transform: capitalize;
     font-weight: 900;
     border-right: 2px solid var(--border-color);
     border-left: 2px solid var(--border-color);
-    padding: .3rem 0.1rem;
 }
 
 nav .nav ul li a:hover:before {
@@ -142,7 +143,7 @@ nav .nav ul li a:hover:after {
 nav .nav ul li a:before {
     font-size: 1rem;
     display: none;
-    padding-top: 0.25rem;
+    padding-top: 0.5rem;
 }
 
 nav .nav ul li a:after {
@@ -179,11 +180,11 @@ nav .nav ul li a[href="#skills"]:after {
     content: "\f085";
 }
 
-nav .nav ul li a[href="#myWork"]:before {
+nav .nav ul li a[href="#work"]:before {
     content: "my work";
 }
 
-nav .nav ul li a[href="#myWork"]:after {
+nav .nav ul li a[href="#work"]:after {
     content: "\f06e";
 }
 
@@ -230,6 +231,7 @@ header {
     display: grid;
     align-content: center;
     justify-content: center;
+    text-align: center;
 }
 
 header h1 {
@@ -243,6 +245,28 @@ header h1 span {
 
 header h1 span.typed {
     text-transform: uppercase;
+}
+
+header a {
+    padding: 1rem 4rem;
+    border: 2px solid var(--yellow);
+    background: #0c02338c;
+    color: var(--yellow);
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    justify-self: center;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+header a:hover {
+    padding: 1rem 6rem;
+    border-radius: 2.2rem;
+    background: var(--main-color);
 }
 
 /* End Header rules */
