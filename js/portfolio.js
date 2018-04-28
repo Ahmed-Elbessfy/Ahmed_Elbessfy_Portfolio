@@ -38,13 +38,7 @@ $(window).scroll(function () {
 //        $('nav').removeClass('contrast');
 //    }
     //section about animation 
-    if(scrollTopVal > 1500){
-        $('#about ul li').css('animation-name' , 'bounceInRight');
-    } else{
-//        $('#about ul li').css('animation-name' , 'none');
-        
-    }
-});
+
 
 //            //$("#scroll").click(function () {
 //            //    $("html").animate({
