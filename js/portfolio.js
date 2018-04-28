@@ -24,19 +24,28 @@
 //    });
 //});
 
-//$(window).scroll(function () {
-//            console.log($(window).scrollTop());
-//            var headerH = $(window).height();
+$(window).scroll(function () {
+    const scrollTopVal = $(window).scrollTop();
+    console.log(scrollTopVal);
+//    var headerH = $(window).height();
 //
-//            console.log(headerH);
-//            //    if ($(window).scrollTop() >= (headerH - 300)) {
-//            //        //        $('#scroll').show();
-//            //        $('nav').addClass('contrast');
-//            //    } else {
-//            //        //        $('#scroll').hide();
-//            //        $('nav').removeClass('contrast');
-//            //    }});
-//
+//    console.log(headerH);
+//    if ($(window).scrollTop() >= (headerH - 300)) {
+//        //        $('#scroll').show();
+//        $('nav').addClass('contrast');
+//    } else {
+//        //        $('#scroll').hide();
+//        $('nav').removeClass('contrast');
+//    }
+    //section about animation 
+    if(scrollTopVal > 1500){
+        $('#about ul li').css('animation-name' , 'bounceInRight');
+    } else{
+//        $('#about ul li').css('animation-name' , 'none');
+        
+    }
+});
+
 //            //$("#scroll").click(function () {
 //            //    $("html").animate({
 //            //        scrollTop: 0
