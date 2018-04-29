@@ -434,7 +434,7 @@ header .btn:after {
 }
 
 .shape-rec:hover,
-.shape-rec:focus ,
+.shape-rec:focus,
 .shape-rec:active {
     border-width: 10px;
 }
@@ -649,8 +649,8 @@ section#services ul li {
     transition: all 0.5s;
 }
 
-section#services ul li:hover ,
-section#services ul li:focus ,
+section#services ul li:hover,
+section#services ul li:focus,
 section#services ul li:active {
     -o-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -681,7 +681,7 @@ section#services ul li:last-child:after {
     grid-gap: 2px;
     align-content: center;
     justify-content: center;
-    grid-template-areas: "he he he he" "p p p p" "cu cu ga some" "ca we we some" "ca we we some" "ca re qu qu"
+    grid-template-areas: "he he he he" "p p p p" "cu cu ga pom" "ca we we pom" "ca we we pom" "ca re qu qu"
 }
 
 .portfolio h2 {
@@ -695,8 +695,8 @@ section#services ul li:last-child:after {
     grid-area: p;
 }
 
-.sample:hover ,
-.sample:focus ,
+.sample:hover,
+.sample:focus,
 .sample:active {
     transform: scale(1.05);
 
@@ -797,12 +797,12 @@ section#services ul li:last-child:after {
 
 }
 
-.some {
+.pomodoro {
     /*
     grid-column: 4/5;
     grid-row: 3/5;
 */
-    grid-area: some;
+    grid-area: pom;
     background: url('../media/header%20(8).jpeg') center center no-repeat;
     background-size: cover;
 
@@ -815,7 +815,7 @@ section#services ul li:last-child:after {
 /* Start contact rules */
 
 #contact {
-    grid-template-columns: repeat(auto-fit, minma(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
 }
 
 /* Start contact form rules */
@@ -828,6 +828,11 @@ section#services ul li:last-child:after {
 .contact-form a {
     font-weight: 500;
     font-size: 1.6rem;
+}
+
+.contact-form p {
+    max-width: 70%;
+    margin: auto;
 }
 
 .contact-form > .btn {
@@ -846,7 +851,6 @@ section#services ul li:last-child:after {
 
 /* Start hd-form rules */
 
-/*
 .hd-form {
     background-color: rgba(12, 2, 51, 0.96);
     color: var(--yellow);
@@ -865,7 +869,6 @@ section#services ul li:last-child:after {
     transition: 0.2s 1s;
     display: none;
 }
-*/
 
 .hd-form > p {
     max-width: 80%;
@@ -925,6 +928,22 @@ a#hd-form-close {
 
 /* End hd-form rules */
 
+/* Start Map rules */
+
+.location {
+    /*    padding-top: 3rem;*/
+    /*    max-width: 80%;*/
+    /*    height: 100%;*/
+}
+
+.location iframe {
+    max-width: 100%;
+    margin: auto;
+    padding: 3rem;
+}
+
+/* End Map rules */
+
 /* End contact form rules */
 
 /* Start Map rules */
@@ -957,12 +976,18 @@ footer ul li {
         grid-template-columns: repeat(4, minmax(13rem, 1fr));
         grid-template-rows: auto auto repeat(4, minmax(13rem, 1fr));
     }
+    .contact-form {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 3rem;
+        border-right: none;
+    }
+
 }
 
 
 @media (max-width:1100px) {
     html {
-        font-size: 12px;
+        font-size: 13px;
     }
     header h1 {
         font-size: 3rem;
@@ -972,12 +997,7 @@ footer ul li {
     .portfolio {
         grid-template-columns: repeat(2, minmax(13rem, 1fr));
         grid-auto-rows: 1fr;
-        grid-template-areas: "he he " " p p" "cu ga " "cu ca" " we ca " "we qu" "some qu" "some re";
-    }
-    .contact-form {
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 3rem;
-        border-right: none;
+        grid-template-areas: "he he " " p p" "cu ga " "cu ca" " we ca " "we qu" "pom qu" "pom re";
     }
 
 
@@ -1031,7 +1051,7 @@ footer ul li {
     .portfolio {
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(25rem, 1fr);
-        grid-template-areas: "he" "p" "cu" "ca" "we " "qu" "re" "ga " "some";
+        grid-template-areas: "he" "p" "cu" "ca" "we " "qu" "re" "ga " "pom";
     }
 }
 
