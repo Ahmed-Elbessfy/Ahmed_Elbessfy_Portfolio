@@ -23,22 +23,63 @@
 //
 //    });
 //});
+$('nav .nav ul li a').click(function () {
+   $('.nav a').removeClass('active'); $(this).addClass('active');
+});
+    var headerH, aboutH, skillsH, workH, servicesH, contactH, bodyH;
+    headerH = $('header').height()-400;
+    aboutH = $('#about').height()-100;
+    skillsH = $('#skills').height()-350;
+    workH = $('#work').height()+100;
+    servicesH = $('#services').height()+200;
+    contactH = $('#contact').height();
 
 $(window).scroll(function () {
     const scrollTopVal = $(window).scrollTop();
     console.log(scrollTopVal);
-//    var headerH = $(window).height();
-//
-//    console.log(headerH);
-//    if ($(window).scrollTop() >= (headerH - 300)) {
-//        //        $('#scroll').show();
-//        $('nav').addClass('contrast');
-//    } else {
-//        //        $('#scroll').hide();
-//        $('nav').removeClass('contrast');
-//    }
-    //section about animation 
-
+    if (scrollTopVal <= headerH) {
+        $("a").removeClass('active');
+        $("[href='#home']").addClass('active');
+    } else if (scrollTopVal >= headerH && scrollTopVal < (aboutH + headerH)) {
+        $("a").removeClass('active');
+        $("a[href='#about']").addClass('active');
+    } else if (scrollTopVal >= (aboutH + headerH ) && scrollTopVal < (aboutH + headerH+skillsH)) {
+        $("a").removeClass('active');
+        $("a[href='#skills']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+400) && scrollTopVal < (headerH+aboutH+skillsH+workH)) {
+        $("a").removeClass('active');
+        $("a[href='#work']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+workH) && scrollTopVal < (headerH+aboutH+skillsH+workH+servicesH)) {
+        $("a").removeClass('active');
+        $("a[href='#services']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+workH+servicesH) && scrollTopVal < (headerH+aboutH+skillsH+workH+servicesH+contactH)) {
+        $("a").removeClass('active');
+        $("a[href='#contact']").addClass('active');
+    }
+});
+$(window).on('load',function () {
+    const scrollTopVal = $(window).scrollTop();
+    console.log(scrollTopVal);
+    if (scrollTopVal <= headerH) {
+        $("a").removeClass('active');
+        $("[href='#home']").addClass('active');
+    } else if (scrollTopVal >= headerH && scrollTopVal < (aboutH + headerH)) {
+        $("a").removeClass('active');
+        $("a[href='#about']").addClass('active');
+    } else if (scrollTopVal >= (aboutH + headerH ) && scrollTopVal < (aboutH + headerH+skillsH)) {
+        $("a").removeClass('active');
+        $("a[href='#skills']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+400) && scrollTopVal < (headerH+aboutH+skillsH+workH)) {
+        $("a").removeClass('active');
+        $("a[href='#work']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+workH) && scrollTopVal < (headerH+aboutH+skillsH+workH+servicesH)) {
+        $("a").removeClass('active');
+        $("a[href='#services']").addClass('active');
+    } else if (scrollTopVal > (headerH+aboutH+skillsH+workH+servicesH) && scrollTopVal < (headerH+aboutH+skillsH+workH+servicesH+contactH)) {
+        $("a").removeClass('active');
+        $("a[href='#contact']").addClass('active');
+    }
+});
 
 //            //$("#scroll").click(function () {
 //            //    $("html").animate({
