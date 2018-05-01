@@ -21,9 +21,9 @@
 
 html {
     font-family: 'Raleway', 'Helvetica', 'Arial', "Helvetica Neue", sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.5;
-    overflow: hidden;
+    /*    overflow: hidden;*/
 }
 
 body {
@@ -42,17 +42,19 @@ h3 {
 h2,
 h3 {
     font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
     font-family: 'montserrat alternates';
 }
 
 h1 {
     max-width: 40rem;
+    width: 90%;
+    margin: auto;
     font-size: 2.5rem;
     font-weight: 500;
     font-family: 'Fredericka the Great';
-    height: 400px;
-    text-align: left;
+    height: 210px;
+    text-align: center;
 }
 
 h2 {
@@ -79,9 +81,9 @@ a {
 }
 
 .logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    padding-top: 5px;
+    width: 5rem;
+    height: 5rem;
+    padding-top: 4px;
     border: 2px solid var(--yellow);
     align-self: start;
     justify-self: center;
@@ -252,6 +254,7 @@ a {
 
 /* Start Nav rules*/
 
+/*
 nav {
     background-color: var(--main-color);
     position: fixed;
@@ -270,21 +273,52 @@ nav {
     --border-color: #ffd710;
 }
 
-nav .nav ul li a {
-    display: block;
-    margin: 1rem auto;
-    color: var(--yellow);
-    height: 2.5rem;
-    width: 3.5rem;
-    text-transform: capitalize;
-    font-weight: 900;
-    border-right: 2px solid var(--border-color);
-    border-left: 2px solid var(--border-color);
+*/
+
+nav {
+    background-color: var(--main-color);
+    position: fixed;
+    top: 10px;
+    left: 5%;
+    border-radius: 20px;
+    padding: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    --border-color: #ffd710;
+    z-index: 5;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4.4rem, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-gap: 0.5rem;
 }
 
+nav .nav ul li a{
+    display: inline-block;
+    height: 3.5rem;
+    min-width: 4.4rem;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    color: var(--yellow);
+    text-transform: capitalize;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 6px;
+}
+nav .nav ul li a:hover{
+    padding-top: 9px;
+}
 nav .nav ul li a.active {
     color: var(--main-bg);
     border-color: var(--main-bg);
+}
+nav .nav ul li a:before {
+    font-size: 1rem;
+    display: none;
 }
 
 nav .nav ul li a:hover:before,
@@ -299,18 +333,12 @@ nav .nav ul li a:focus:after {
     display: none;
 }
 
-nav .nav ul li a:before {
-    font-size: 0.8rem;
-    display: none;
-    padding-top: 0.7rem;
-}
-
 nav .nav ul li a:after {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-variant-caps: normal;
     font-variant-ligatures: normal;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
@@ -366,6 +394,7 @@ nav .nav ul li a[href="#contact"]:after {
     content: "\f095";
 }
 
+
 nav .social {
     align-self: end;
 }
@@ -379,6 +408,28 @@ nav .social {
 }
 
 
+nav .social {
+    display: none;
+}
+
+
+/*
+main {
+    padding: 0 4rem;
+}
+
+section {
+    padding: 6rem;
+}
+
+.portfolio {
+    grid-template-columns: minmax(45rem, 1fr);
+    grid-auto-rows: minmax(25rem, 1fr);
+    grid-template-areas: "he" "p" "cu" "ad" "ac" "ca" "we" "wiki" "pom" "ga";
+}
+
+*/
+
 /* End Nav rules */
 
 /* Start Header rules*/
@@ -390,6 +441,7 @@ header {
     display: grid;
     align-content: center;
     text-align: center;
+    padding-top: 15rem;
 }
 
 header .content {
@@ -409,6 +461,10 @@ header h1 span.typed {
     text-transform: uppercase;
 }
 
+header .btn {
+    margin-bottom: 15rem;
+}
+
 header .btn:after {
     content: "\f30b";
     font-family: "Font Awesome 5 Free";
@@ -419,6 +475,11 @@ header .btn:after {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     margin-left: 1rem;
+}
+
+
+header .arrows {
+    /*    margin: 4rem auto -18rem;*/
 }
 
 .shape-rec {
@@ -646,152 +707,154 @@ section#services ul li:last-child:after {
 /* Start Portfolio rules */
 
 #work {}
+/*
 
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(18rem, 1fr));
-    grid-template-rows: auto auto repeat(5, minmax(18rem, 1fr));
-    grid-gap: 1px;
-    align-content: center;
-    justify-content: center;
-    grid-template-areas: "he he he he" "p p p p" "cu cu ac ac" "ca we we pom" "ca we we pom" "ad ad ad ga" "wiki wiki wiki ga";
-}
+                .portfolio {
+                    display: grid;
+                    grid-template-columns: repeat(4, minmax(18rem, 1fr));
+                    grid-template-rows: auto auto repeat(5, minmax(18rem, 1fr));
+                    grid-gap: 1px;
+                    align-content: center;
+                    justify-content: center;
+                    grid-template-areas: "he he he he" "p p p p" "cu cu ac ac" "ca we we pom" "ca we we pom" "ad ad ad ga" "wiki wiki wiki ga";
+                }
 
-.portfolio h2 {
-    grid-area: he;
-}
+                .portfolio h2 {
+                    grid-area: he;
+                }
 
-.portfolio p {
-    margin-bottom: 3rem;
-    grid-area: p;
-}
+                .portfolio p {
+                    margin-bottom: 3rem;
+                    grid-area: p;
+                }
 
-.sample {
-    position: relative;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-}
+                .sample {
+                    position: relative;
+                    display: grid;
+                    align-content: center;
+                    justify-content: center;
+                }
 
-.sample:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 0;
-    height: 0;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
+                .sample:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    width: 0;
+                    height: 0;
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
 
-.sample .img-skill {
-    z-index: 10;
-}
+                .sample .img-skill {
+                    z-index: 10;
+                }
 
-.sample span,
-.sample a {
-    display: inline-block;
-    color: var(--main-bg);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 4px 7px;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin: 0.2rem;
-    text-transform: uppercase;
-    opacity: 0;
-}
+                .sample span,
+                .sample a {
+                    display: inline-block;
+                    color: var(--main-bg);
+                    background-color: rgba(0, 0, 0, 0.8);
+                    padding: 4px 7px;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                    margin: 0.2rem;
+                    text-transform: uppercase;
+                    opacity: 0;
+                }
 
-.sample a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-}
+                .sample a {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    -webkit-transition: all 0.4s;
+                    -o-transition: all 0.4s;
+                    -moz-transition: all 0.4s;
+                    transition: all 0.4s;
+                }
 
-.sample:hover,
-.sample:focus,
-.sample:active {
-    transform: scale(1.05);
-    z-index: 1;
-}
+                .sample:hover,
+                .sample:focus,
+                .sample:active {
+                    transform: scale(1.05);
+                    z-index: 1;
+                }
 
-.sample:hover:before,
-.sample:focus:before,
-.sample:active:before {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+                .sample:hover:before,
+                .sample:focus:before,
+                .sample:active:before {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
 
-.sample:hover .img-skill span,
-.sample:hover a {
-    opacity: 1;
-}
+                .sample:hover .img-skill span,
+                .sample:hover a {
+                    opacity: 1;
+                }
 
-.cupid {
-    grid-area: cu;
-    background: url('../media/porfolio/cupied.png') top center no-repeat;
-    background-size: cover;
-}
+                .cupid {
+                    grid-area: cu;
+                    background: url('../media/porfolio/cupied.png') top center no-repeat;
+                    background-size: cover;
+                }
 
-.calc {
-    grid-area: ca;
-    background: url('../media/porfolio/calc.png') top center no-repeat;
-    background-size: cover;
-}
+                .calc {
+                    grid-area: ca;
+                    background: url('../media/porfolio/calc.png') top center no-repeat;
+                    background-size: cover;
+                }
 
-.acme {
-    grid-area: ac;
-    background: url('../media/porfolio/acme.png') center center no-repeat;
-    background-size: cover;
+                .acme {
+                    grid-area: ac;
+                    background: url('../media/porfolio/acme.png') center center no-repeat;
+                    background-size: cover;
 
-}
+                }
 
-.admin {
-    grid-area: ad;
-    background: url('../media/porfolio/admin.png') top center no-repeat;
-    background-size: cover;
+                .admin {
+                    grid-area: ad;
+                    background: url('../media/porfolio/admin.png') top center no-repeat;
+                    background-size: cover;
 
-}
+                }
 
-.weather {
-    grid-area: we;
-    background: url('../media/porfolio/weather.png') center center no-repeat;
-    background-size: cover;
+                .weather {
+                    grid-area: we;
+                    background: url('../media/porfolio/weather.png') center center no-repeat;
+                    background-size: cover;
 
-}
+                }
 
-.wiki {
-    grid-area: wiki;
-    background: url('../media/porfolio/wiki.png') top center no-repeat;
-    background-size: cover;
+                .wiki {
+                    grid-area: wiki;
+                    background: url('../media/porfolio/wiki.png') top center no-repeat;
+                    background-size: cover;
 
-}
+                }
 
-.pomodoro {
-    grid-area: pom;
-    background: url('../media/porfolio/pom.png') center center no-repeat;
-    background-size: cover;
+                .pomodoro {
+                    grid-area: pom;
+                    background: url('../media/porfolio/pom.png') center center no-repeat;
+                    background-size: cover;
 
-}
+                }
 
-.game {
-    grid-area: ga;
-    background: url('../media/porfolio/game.png') center center no-repeat;
-    background-size: cover;
+                .game {
+                    grid-area: ga;
+                    background: url('../media/porfolio/game.png') center center no-repeat;
+                    background-size: cover;
 
-}
+                }
+*/
 
 /* End Portfolio rules */
 
@@ -809,9 +872,11 @@ section#services ul li:last-child:after {
     border-right: 1px solid var(--border-color);
     padding-right: 2rem;
 }
-.contact-form h2{
+
+.contact-form h2 {
     margin-bottom: 2rem;
 }
+
 .contact-form a {
     font-weight: 500;
     font-size: 1.2rem;
@@ -921,7 +986,7 @@ a#hd-form-close {
 /* Start Map rules */
 
 .location iframe {
-/*
+    /*
     width: 100%;
     height: 100%;
     min-height: 30rem;
@@ -953,90 +1018,8 @@ footer ul li {
 
 /* Start Media Queries rules */
 
-@media (max-width:1400px) {
-    html, body {
-        font-size: 13px;
-    }
-    
-    header h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .portfolio {
-/*        grid-template-columns: 1fr 1fr ;*/
-/*
-        grid-template-columns: minmax(13rem, 1fr) 3rem minmax(13rem, 1fr);
-*/
-        grid-template-rows: repeat(6,minamx(7rem , 1fr));
-/*        grid-auto-rows: minmax(5rem,10rem);*/
-        grid-template-areas: "he he he" " p p p" "cu cu ca " "cu cu ca" " ac we we" "ac we we" "ad ad pom" "ad ad pom" "ga wiki wiki" "ga wiki wiki";
-    }
-
-    .contact-form {
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 3rem;
-        border-right: none;
-    }
-    .location iframe{
-        padding-left: 0;
-        padding-top: 3rem;
-    }
-
-}
-
 @media (max-width:1000px) {
-/*    html{font-size: 10px;}*/
-    nav {
-        top: 10px;
-        left: 5%;
-        padding: 10px;
-        width: 90%;
-        min-height: 4.6rem;
-        min-width: 30rem;
-        grid-gap: .5rem;
-        grid-template-columns: 1fr;
-    }
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-        grid-auto-rows: 5rem;
-        grid-gap: 0.5rem;
-    }
-    nav .nav ul li a {
-        padding: 3px;
-        margin: 0.6rem 0;
-        height: 3.5rem;
-        width: auto;
-        border: none;
-        border-top: 2px solid var(--border-color);
-        border-bottom: 2px solid var(--border-color);
-    }
-    nav .nav ul li a:before {
-        font-size: 1.1rem;
-    }
-
-    nav .social {
-        display: none;
-    }
-
-    header h1 {
-        margin-top: 5rem;
-        font-size: 3rem;
-        text-align: center;
-        height: 400px;
-    }
-    main {
-        padding: 0 4rem;
-    }
-    section {
-        padding: 6rem;
-    }
-    .portfolio {
-        grid-template-columns: minmax(45rem,1fr);
-        grid-auto-rows: minmax(25rem, 1fr);
-        grid-template-areas: "he" "p" "cu" "ad" "ac" "ca" "we" "wiki" "pom" "ga";
-    }
+    /*    html{font-size: 10px;}*/
 }
 
 /* End Media Queries rules */
