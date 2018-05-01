@@ -41,17 +41,17 @@ h3 {
 
 h2,
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 0.3rem;
     font-family: 'montserrat alternates';
 }
 
 h1 {
     max-width: 40rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 500;
     font-family: 'Fredericka the Great';
-    height: 570px;
+    height: 400px;
     text-align: left;
 }
 
@@ -61,12 +61,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 ul {
@@ -79,14 +79,14 @@ a {
 }
 
 .logo {
-    width: 57px;
-    height: 57px;
-    padding-top: 4px;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding-top: 5px;
     border: 2px solid var(--yellow);
     align-self: start;
     justify-self: center;
     text-transform: uppercase;
-    font-size: 29px;
+    font-size: 25px;
     background-color: var(--main-color);
 }
 
@@ -106,7 +106,7 @@ a {
     background: #0c02338c;
     color: var(--yellow);
     border-radius: 1rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: capitalize;
     justify-self: center;
     font-weight: 700;
@@ -145,7 +145,7 @@ a {
     position: absolute;
     top: 0;
     width: 2px;
-    height: 3rem;
+    height: 2rem;
     background-color: var(--yellow);
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -257,14 +257,13 @@ nav {
     position: fixed;
     left: 10px;
     top: 5%;
-    padding: 35px 10px;
-    width: 5.5rem;
+    padding: 25px 10px;
+    width: 4.2rem;
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: 1rem;
     justify-content: center;
     text-align: center;
-    min-width: 4.6rem;
-    min-height: 50rem;
+    min-height: 40rem;
     max-height: 90rem;
     border-radius: 20px;
     z-index: 5;
@@ -273,10 +272,10 @@ nav {
 
 nav .nav ul li a {
     display: block;
-    margin: 2rem auto;
+    margin: 1rem auto;
     color: var(--yellow);
     height: 2.5rem;
-    width: 4.3rem;
+    width: 3.5rem;
     text-transform: capitalize;
     font-weight: 900;
     border-right: 2px solid var(--border-color);
@@ -301,9 +300,9 @@ nav .nav ul li a:focus:after {
 }
 
 nav .nav ul li a:before {
-    font-size: 1rem;
+    font-size: 0.8rem;
     display: none;
-    padding-top: 0.5rem;
+    padding-top: 0.7rem;
 }
 
 nav .nav ul li a:after {
@@ -311,7 +310,7 @@ nav .nav ul li a:after {
     font-style: normal;
     font-variant-caps: normal;
     font-variant-ligatures: normal;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
@@ -391,7 +390,6 @@ header {
     display: grid;
     align-content: center;
     text-align: center;
-    /*    overflow: hidden;*/
 }
 
 header .content {
@@ -494,7 +492,7 @@ main {
     display: grid;
     align-content: center;
     justify-items: center;
-    padding: 0 6rem;
+    padding: 0 10%;
 }
 
 /*Section General Rules*/
@@ -503,9 +501,8 @@ section {
     border-bottom: 1px solid var(--border-color);
     display: grid;
     text-align: center;
-    width: 95%;
-    max-width: 110rem;
-    padding: 6rem 4rem;
+    max-width: 90rem;
+    padding: 6rem;
 }
 
 section > p {
@@ -598,7 +595,8 @@ section#about blockquote cite {
     margin-top: 0.5rem;
     border-radius: 8px;
     text-transform: uppercase;
-    letter-spacing: 1.5px
+    letter-spacing: 1.5px;
+    font-size: 1rem;
 }
 
 /* End Skills rules */
@@ -608,8 +606,8 @@ section#about blockquote cite {
 section#services ul {
     text-align: left;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-gap: 1.5rem;
 }
 
 section#services ul li {
@@ -617,7 +615,7 @@ section#services ul li {
     border: none;
     border-left: 1px solid var(--yellow);
     border-bottom-left-radius: 36%;
-    min-height: 27rem;
+    min-height: 21rem;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -652,7 +650,7 @@ section#services ul li:last-child:after {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(4, minmax(18rem, 1fr));
-    grid-template-rows: auto auto repeat(5, minmax(20rem, 1fr));
+    grid-template-rows: auto auto repeat(5, minmax(18rem, 1fr));
     grid-gap: 1px;
     align-content: center;
     justify-content: center;
@@ -802,24 +800,27 @@ section#services ul li:last-child:after {
 /* Start contact rules */
 
 #contact {
-    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 /* Start contact form rules */
 
 .contact-form {
     border-right: 1px solid var(--border-color);
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
-
+.contact-form h2{
+    margin-bottom: 2rem;
+}
 .contact-form a {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 .contact-form p {
-    max-width: 70%;
+    max-width: 65%;
     margin: auto;
+    line-height: 1.8;
 }
 
 .contact-form > .btn {
@@ -920,9 +921,13 @@ a#hd-form-close {
 /* Start Map rules */
 
 .location iframe {
-    max-width: 100%;
+/*
+    width: 100%;
+    height: 100%;
+    min-height: 30rem;
     margin: auto;
-    padding: 3rem;
+    padding-left: 3rem;
+*/
 }
 
 /* End Map rules */
@@ -949,9 +954,11 @@ footer ul li {
 /* Start Media Queries rules */
 
 @media (max-width:1400px) {
-    html {
+    html, body {
         font-size: 13px;
+        overflow: auto;
     }
+    
     header h1 {
         font-size: 3rem;
         text-align: center;
@@ -968,11 +975,15 @@ footer ul li {
         padding-bottom: 3rem;
         border-right: none;
     }
-
+    .location iframe{
+        padding-left: 0;
+        padding-top: 3rem;
+    }
 
 }
 
 @media (max-width:1000px) {
+/*    html{font-size: 10px;}*/
     nav {
         top: 10px;
         left: 5%;
@@ -1013,13 +1024,13 @@ footer ul li {
         height: 400px;
     }
     main {
-        padding: 0 2rem;
+        padding: 0 4rem;
     }
     section {
-        padding: 6rem 2rem;
+        padding: 6rem;
     }
     .portfolio {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(45rem,1fr);
         grid-auto-rows: minmax(25rem, 1fr);
         grid-template-areas: "he" "p" "cu" "ad" "ac" "ca" "we" "wiki" "pom" "ga";
     }
