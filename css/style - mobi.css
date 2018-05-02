@@ -16,14 +16,13 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    /*    outline: 0.2px solid #b2b2b2;*/
+/*    outline: 0.2px solid #e8e8e8;*/
 }
 
 html {
     font-family: 'Raleway', 'Helvetica', 'Arial', "Helvetica Neue", sans-serif;
     font-size: 10px;
     line-height: 1.5;
-    /*    overflow: hidden;*/
 }
 
 body {
@@ -273,23 +272,23 @@ nav {
     width: 90%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 10px;
     --border-color: #ffd710;
     z-index: 5;
 }
 
-nav ul {
+nav .nav ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4.4rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
     justify-items: center;
     align-items: center;
-    grid-gap: 0.5rem;
+    grid-gap: 15px;
 }
 
 nav .nav ul li a {
     display: inline-block;
     height: 3.5rem;
-    min-width: 4.4rem;
+    min-width: 54px;
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
     color: var(--yellow);
@@ -395,19 +394,6 @@ nav .social {
 nav .social {
     display: none;
 }
-
-
-/*
-main {
-    padding: 0 4rem;
-}
-
-section {
-    padding: 6rem;
-}
-
-
-*/
 
 /* End Nav rules */
 
@@ -541,7 +527,7 @@ section {
     border-bottom: 1px solid var(--border-color);
     display: grid;
     text-align: center;
-    padding: 2rem;
+    padding: 8% 2%;
 }
 
 section > p {
@@ -681,7 +667,7 @@ section#services ul li:last-child:after {
 .portfolio {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(20rem, 50rem);
+    grid-template-columns: minmax(15rem, 50rem);
     grid-template-rows: auto auto repeat(8, minmax(25rem, 1fr));
     grid-gap: 1px;
     align-content: center;
@@ -983,7 +969,7 @@ footer ul li {
         padding: 25px 10px;
         width: 65px;
         display: grid;
-        grid-gap: 3rem;
+        grid-gap: 36px;
         justify-content: center;
         text-align: center;
     }
@@ -992,11 +978,17 @@ footer ul li {
         margin: 3px auto;
         height: 37.5px;
         width: 42.5px;
+        /*        min-width: auto;*/
         border: none;
         border-right: 2px solid var(--border-color);
         border-left: 2px solid var(--border-color);
     }
-
+    nav .nav ul li a:before {
+        font-size: 12px;
+    }
+    nav .nav ul li a:after {
+        font-size: 18px;
+    }
     nav .nav ul li a[href="#work"]:hover {
         padding-top: 2px;
     }
@@ -1009,7 +1001,7 @@ footer ul li {
     main {
         padding: 0 10%;
     }
-    /*    Start main Rules*/
+    /*    End main Rules*/
     /*    Start Section Rules*/
     section {
         padding: 5rem;
@@ -1064,8 +1056,8 @@ footer ul li {
     /*    Start Services Rules*/
     section#services > p {
         max-width: 80%;
-        margin-left:  auto;
-        margin-right:  auto
+        margin-left: auto;
+        margin-right: auto
     }
     section#services ul {
         grid-gap: 2.5rem;
@@ -1084,6 +1076,60 @@ footer ul li {
         transform: scale(1.1);
     }
     /*    End Services Rules*/
+}
+
+@media (min-width:1250px) {
+    html {
+        font-size: 15px;
+    }
+    /*    Start Header Rules*/
+    header h1 {
+        height: 400px;
+        text-align: left;
+
+    }
+    header .btn {
+        margin-bottom: inherit;
+    }
+    /*    End Header Rules*/
+    /*    Start Section Rules*/
+    section {
+        padding: 5rem ;
+    }
+
+    /*    End Section Rules*/
+    /*    Start Portfolio Rules*/
+    .portfolio {
+        grid-template-columns: repeat(4,  1fr);
+        grid-template-rows: auto auto repeat(5, minmax(16rem, 1fr));
+        grid-template-areas: "h h h h" "p p p p" "cup cup acme acme" "calc wea wea pom" "calc wea wea pom" "adm adm adm ga" "wiki wiki wiki ga";
+    }
+
+    /*    End Portfolio Rules*/
+    /*    Start Services Rules*/
+    section#services > p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    section#services ul {
+        grid-gap: 2.5rem;
+    }
+
+    section#services ul li {
+        padding-bottom: 5rem;
+    }
+
+    section#services ul li:hover,
+    section#services ul li:focus,
+    section#services ul li:active {
+        -o-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
 }
 
 /* End Media Queries rules */
