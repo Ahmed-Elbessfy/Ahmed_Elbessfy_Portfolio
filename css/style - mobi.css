@@ -68,7 +68,7 @@ h3 {
 
 
 p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 ul {
@@ -81,8 +81,8 @@ a {
 }
 
 .logo {
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     padding-top: 4px;
     border: 2px solid var(--yellow);
     align-self: start;
@@ -127,6 +127,15 @@ a {
     background: var(--main-color);
     border-color: var(--main-color);
 }
+
+.social a {
+    display: inline-block;
+    font-weight: 900;
+    padding: .3rem;
+    font-size: 1.2rem;
+    color: var(--yellow);
+}
+
 
 .arrows {
     height: 3rem;
@@ -254,27 +263,6 @@ a {
 
 /* Start Nav rules*/
 
-/*
-nav {
-    background-color: var(--main-color);
-    position: fixed;
-    left: 10px;
-    top: 5%;
-    padding: 25px 10px;
-    width: 4.2rem;
-    display: grid;
-    grid-gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    min-height: 40rem;
-    max-height: 90rem;
-    border-radius: 20px;
-    z-index: 5;
-    --border-color: #ffd710;
-}
-
-*/
-
 nav {
     background-color: var(--main-color);
     position: fixed;
@@ -289,6 +277,7 @@ nav {
     --border-color: #ffd710;
     z-index: 5;
 }
+
 nav ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(4.4rem, 1fr));
@@ -297,7 +286,7 @@ nav ul {
     grid-gap: 0.5rem;
 }
 
-nav .nav ul li a{
+nav .nav ul li a {
     display: inline-block;
     height: 3.5rem;
     min-width: 4.4rem;
@@ -309,13 +298,16 @@ nav .nav ul li a{
     text-align: center;
     padding-top: 6px;
 }
-nav .nav ul li a:hover{
+
+nav .nav ul li a:hover {
     padding-top: 9px;
 }
+
 nav .nav ul li a.active {
     color: var(--main-bg);
     border-color: var(--main-bg);
 }
+
 nav .nav ul li a:before {
     font-size: 1rem;
     display: none;
@@ -399,14 +391,6 @@ nav .social {
     align-self: end;
 }
 
-.social a {
-    display: inline-block;
-    font-weight: 900;
-    padding: .3rem;
-    font-size: 1.2rem;
-    color: var(--yellow);
-}
-
 
 nav .social {
     display: none;
@@ -422,11 +406,6 @@ section {
     padding: 6rem;
 }
 
-.portfolio {
-    grid-template-columns: minmax(45rem, 1fr);
-    grid-auto-rows: minmax(25rem, 1fr);
-    grid-template-areas: "he" "p" "cu" "ad" "ac" "ca" "we" "wiki" "pom" "ga";
-}
 
 */
 
@@ -553,7 +532,7 @@ main {
     display: grid;
     align-content: center;
     justify-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 /*Section General Rules*/
@@ -562,8 +541,7 @@ section {
     border-bottom: 1px solid var(--border-color);
     display: grid;
     text-align: center;
-    max-width: 90rem;
-    padding: 6rem;
+    padding: 2rem;
 }
 
 section > p {
@@ -649,12 +627,12 @@ section#about blockquote cite {
 
 #skills span {
     display: inline-block;
-    padding: 10px;
+    padding: 6px 9px;
     background: var(--main-color);
     color: var(--main-bg);
     margin-right: 0.5rem;
     margin-top: 0.5rem;
-    border-radius: 8px;
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1rem;
@@ -668,6 +646,7 @@ section#services ul {
     text-align: left;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-auto-rows: minmax(24rem, 1fr);
     grid-gap: 1.5rem;
 }
 
@@ -676,13 +655,15 @@ section#services ul li {
     border: none;
     border-left: 1px solid var(--yellow);
     border-bottom-left-radius: 36%;
-    min-height: 21rem;
+    /*    min-height: 21rem;*/
+    /*    padding-bottom: 6rem;*/
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
 
+/*
 section#services ul li:hover,
 section#services ul li:focus,
 section#services ul li:active {
@@ -691,6 +672,7 @@ section#services ul li:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+*/
 
 section#services ul li p {
     max-width: 80%;
@@ -707,154 +689,141 @@ section#services ul li:last-child:after {
 /* Start Portfolio rules */
 
 #work {}
-/*
 
-                .portfolio {
-                    display: grid;
-                    grid-template-columns: repeat(4, minmax(18rem, 1fr));
-                    grid-template-rows: auto auto repeat(5, minmax(18rem, 1fr));
-                    grid-gap: 1px;
-                    align-content: center;
-                    justify-content: center;
-                    grid-template-areas: "he he he he" "p p p p" "cu cu ac ac" "ca we we pom" "ca we we pom" "ad ad ad ga" "wiki wiki wiki ga";
-                }
+.portfolio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr);
+    grid-template-rows: auto auto repeat(8, minmax(20rem, 1fr));
+    grid-gap: 1px;
+    align-content: center;
+    justify-content: center;
+}
 
-                .portfolio h2 {
-                    grid-area: he;
-                }
+.portfolio p {
+    margin-bottom: 3rem;
+}
 
-                .portfolio p {
-                    margin-bottom: 3rem;
-                    grid-area: p;
-                }
+.sample {
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+}
 
-                .sample {
-                    position: relative;
-                    display: grid;
-                    align-content: center;
-                    justify-content: center;
-                }
+.sample:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 0;
+    height: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
-                .sample:before {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    background-color: rgba(0, 0, 0, 0.4);
-                    width: 0;
-                    height: 0;
-                    -webkit-transition: all 0.3s;
-                    -o-transition: all 0.3s;
-                    -moz-transition: all 0.3s;
-                    transition: all 0.3s;
-                }
+.sample .img-skill {
+    z-index: 10;
+    11
+}
 
-                .sample .img-skill {
-                    z-index: 10;
-                }
+.sample span,
+.sample a {
+    display: inline-block;
+    color: var(--main-bg);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 4px 7px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+}
 
-                .sample span,
-                .sample a {
-                    display: inline-block;
-                    color: var(--main-bg);
-                    background-color: rgba(0, 0, 0, 0.8);
-                    padding: 4px 7px;
-                    font-size: 1rem;
-                    border-radius: 5px;
-                    margin: 0.2rem;
-                    text-transform: uppercase;
-                    opacity: 0;
-                }
+.sample a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
 
-                .sample a {
-                    position: absolute;
-                    bottom: 20px;
-                    left: 50%;
-                    -webkit-transform: translateX(-50%);
-                    -o-transform: translateX(-50%);
-                    -moz-transform: translateX(-50%);
-                    transform: translateX(-50%);
-                    -webkit-transition: all 0.4s;
-                    -o-transition: all 0.4s;
-                    -moz-transition: all 0.4s;
-                    transition: all 0.4s;
-                }
+.sample:hover,
+.sample:focus,
+.sample:active {
+    transform: scale(1.05);
+    z-index: 1;
+}
 
-                .sample:hover,
-                .sample:focus,
-                .sample:active {
-                    transform: scale(1.05);
-                    z-index: 1;
-                }
+.sample:hover:before,
+.sample:focus:before,
+.sample:active:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-                .sample:hover:before,
-                .sample:focus:before,
-                .sample:active:before {
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
+.sample:hover .img-skill span,
+.sample:hover a {
+    opacity: 1;
+}
 
-                .sample:hover .img-skill span,
-                .sample:hover a {
-                    opacity: 1;
-                }
+.cupid {
+    background: url('../media/porfolio/cupied.png') top center no-repeat;
+    background-size: cover;
+}
 
-                .cupid {
-                    grid-area: cu;
-                    background: url('../media/porfolio/cupied.png') top center no-repeat;
-                    background-size: cover;
-                }
+.calc {
+    background: url('../media/porfolio/calc.png') top center no-repeat;
+    background-size: cover;
+}
 
-                .calc {
-                    grid-area: ca;
-                    background: url('../media/porfolio/calc.png') top center no-repeat;
-                    background-size: cover;
-                }
+.acme {
+    background: url('../media/porfolio/acme.png') center center no-repeat;
+    background-size: cover;
 
-                .acme {
-                    grid-area: ac;
-                    background: url('../media/porfolio/acme.png') center center no-repeat;
-                    background-size: cover;
+}
 
-                }
+.admin {
+    background: url('../media/porfolio/admin.png') top center no-repeat;
+    background-size: cover;
 
-                .admin {
-                    grid-area: ad;
-                    background: url('../media/porfolio/admin.png') top center no-repeat;
-                    background-size: cover;
+}
 
-                }
+.weather {
+    background: url('../media/porfolio/weather.png') center center no-repeat;
+    background-size: cover;
 
-                .weather {
-                    grid-area: we;
-                    background: url('../media/porfolio/weather.png') center center no-repeat;
-                    background-size: cover;
+}
 
-                }
+.wiki {
+    background: url('../media/porfolio/wiki.png') top center no-repeat;
+    background-size: cover;
 
-                .wiki {
-                    grid-area: wiki;
-                    background: url('../media/porfolio/wiki.png') top center no-repeat;
-                    background-size: cover;
+}
 
-                }
+.pomodoro {
+    background: url('../media/porfolio/pom.png') center center no-repeat;
+    background-size: cover;
 
-                .pomodoro {
-                    grid-area: pom;
-                    background: url('../media/porfolio/pom.png') center center no-repeat;
-                    background-size: cover;
+}
 
-                }
+.game {
+    background: url('../media/porfolio/game.png') center center no-repeat;
+    background-size: cover;
 
-                .game {
-                    grid-area: ga;
-                    background: url('../media/porfolio/game.png') center center no-repeat;
-                    background-size: cover;
-
-                }
-*/
+}
 
 /* End Portfolio rules */
 
@@ -863,14 +832,14 @@ section#services ul li:last-child:after {
 /* Start contact rules */
 
 #contact {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    /*    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));*/
 }
 
 /* Start contact form rules */
 
 .contact-form {
-    border-right: 1px solid var(--border-color);
-    padding-right: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
 }
 
 .contact-form h2 {
@@ -879,11 +848,11 @@ section#services ul li:last-child:after {
 
 .contact-form a {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.55rem;
 }
 
 .contact-form p {
-    max-width: 65%;
+    max-width: 75%;
     margin: auto;
     line-height: 1.8;
 }
@@ -986,13 +955,10 @@ a#hd-form-close {
 /* Start Map rules */
 
 .location iframe {
-    /*
-    width: 100%;
-    height: 100%;
+
+    width: 90%;
     min-height: 30rem;
-    margin: auto;
-    padding-left: 3rem;
-*/
+    margin: 2rem auto;
 }
 
 /* End Map rules */
@@ -1018,8 +984,103 @@ footer ul li {
 
 /* Start Media Queries rules */
 
-@media (max-width:1000px) {
-    /*    html{font-size: 10px;}*/
+@media (min-width:700px) {
+    body {
+        background-color: rgba(113, 113, 113, 0.13);
+    }
+    html {
+        font-size: 12px;
+    }
+    /*    Start Nav Rules*/
+    nav {
+        left: 10px;
+        top: 5%;
+        padding: 25px 10px;
+        width: 65px;
+        display: grid;
+        grid-gap: 3rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav .nav ul li a {
+        margin: 3px auto;
+        height: 37.5px;
+        width: 42.5px;
+        border: none;
+        border-right: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+    }
+
+    nav .nav ul li a[href="#work"]:hover {
+        padding-top: 2px;
+    }
+
+    nav .social {
+        display: block;
+    }
+    /*    End Nav Rules*/
+    /*    Start main Rules*/
+    main {
+        padding: 0 10%;
+    }
+    /*    Start main Rules*/
+    /*    Start Section Rules*/
+    section {
+        padding: 5rem;
+    }
+    /*    End Section Rules*/
+    /*    Start Portfolio Rules*/
+    #work {
+        padding: 5rem 2rem;
+    }
+    .portfolio {
+        grid-template-columns: 1fr minmax(2rem, 0.3fr) 1fr;
+        grid-template-rows:auto auto repeat(4 , minmax(20rem , 1fr));
+        grid-template-areas: "h h h" "p p p" "cup cup acme" "adm wea wea" "pom pom calc" "ga wiki wiki";
+    }
+    .portfolio h2 {
+        grid-column: 1/-1;
+        grid-area: h;
+    }
+    .portfolio p {
+        grid-column: 1/-1;
+        grid-area: p;
+    }
+    .cupid {
+        grid-area: cup;
+    }
+
+
+    .acme {
+        grid-area: acme;
+    }
+
+    .admin {
+        grid-area: adm;
+    }
+
+    .weather {
+        grid-area: wea;
+    }
+    .calc {
+        grid-area: calc;
+    }
+
+    .wiki {
+        grid-area: wiki;
+    }
+
+    .pomodoro {
+        grid-area: pom;
+    }
+
+    .game {
+        grid-area: ga;
+    }
+    /*    End Portfolio Rules*/
+    /*    End Services Rules*/
+    /*    End Services Rules*/
 }
 
 /* End Media Queries rules */
