@@ -16,7 +16,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-/*    outline: 0.2px solid #e8e8e8;*/
+    /*    outline: 0.2px solid #e8e8e8;*/
 }
 
 html {
@@ -805,10 +805,6 @@ section#services ul li:last-child:after {
 
 /* Start contact rules */
 
-#contact {
-    /*    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));*/
-}
-
 /* Start contact form rules */
 
 .contact-form {
@@ -1080,13 +1076,13 @@ footer ul li {
 
 @media (min-width:1250px) {
     html {
-        font-size: 15px;
+        /*        font-size: 14px;*/
     }
     /*    Start Header Rules*/
     header h1 {
         height: 400px;
         text-align: left;
-
+        font-size: 3rem;
     }
     header .btn {
         margin-bottom: inherit;
@@ -1094,14 +1090,20 @@ footer ul li {
     /*    End Header Rules*/
     /*    Start Section Rules*/
     section {
-        padding: 5rem ;
+        padding: 5rem;
     }
 
     /*    End Section Rules*/
+    /*    Start Skills Rules*/
+    section#skills span{
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+    /*    End Skills Rules*/
     /*    Start Portfolio Rules*/
     .portfolio {
-        grid-template-columns: repeat(4,  1fr);
-        grid-template-rows: auto auto repeat(5, minmax(16rem, 1fr));
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto repeat(5, minmax(24rem, 1fr));
         grid-template-areas: "h h h h" "p p p p" "cup cup acme acme" "calc wea wea pom" "calc wea wea pom" "adm adm adm ga" "wiki wiki wiki ga";
     }
 
@@ -1112,24 +1114,30 @@ footer ul li {
         margin-left: auto;
         margin-right: auto
     }
-
     section#services ul {
-        grid-gap: 2.5rem;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    /*    End Services Rules*/
+    /*    Start Contact Rules*/
+    Section#contact {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+        padding: 5rem 3rem;
+    }
+    section#contact p {
+        max-width: 90%;
     }
 
-    section#services ul li {
-        padding-bottom: 5rem;
+    section#contact .contact-form {
+        border: none;
+        border-right: 1px solid var(--border-color);
     }
-
-    section#services ul li:hover,
-    section#services ul li:focus,
-    section#services ul li:active {
-        -o-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+    section#services iframe {
+        width: 100%;
     }
-
+    /*    End Contact Rules*/
 }
 
 /* End Media Queries rules */
