@@ -16,14 +16,13 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    /*    outline: 0.2px solid #b2b2b2;*/
+    /*    outline: 0.2px solid #e8e8e8;*/
 }
 
 html {
     font-family: 'Raleway', 'Helvetica', 'Arial', "Helvetica Neue", sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.5;
-    overflow: hidden;
 }
 
 body {
@@ -42,17 +41,19 @@ h3 {
 h2,
 h3 {
     font-size: 2.2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
     font-family: 'montserrat alternates';
 }
 
 h1 {
     max-width: 40rem;
+    width: 90%;
+    margin: auto;
     font-size: 2.5rem;
     font-weight: 500;
     font-family: 'Fredericka the Great';
-    height: 400px;
-    text-align: left;
+    height: 210px;
+    text-align: center;
 }
 
 h2 {
@@ -66,7 +67,7 @@ h3 {
 
 
 p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 ul {
@@ -79,9 +80,9 @@ a {
 }
 
 .logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+    padding-top: 4px;
     border: 2px solid var(--yellow);
     align-self: start;
     justify-self: center;
@@ -125,6 +126,15 @@ a {
     background: var(--main-color);
     border-color: var(--main-color);
 }
+
+.social a {
+    display: inline-block;
+    font-weight: 900;
+    padding: .3rem;
+    font-size: 1.2rem;
+    color: var(--yellow);
+}
+
 
 .arrows {
     height: 3rem;
@@ -255,36 +265,51 @@ a {
 nav {
     background-color: var(--main-color);
     position: fixed;
-    left: 10px;
-    top: 5%;
-    padding: 25px 10px;
-    width: 4.2rem;
-    display: grid;
-    grid-gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    min-height: 40rem;
-    max-height: 90rem;
+    top: 10px;
+    left: 5%;
     border-radius: 20px;
-    z-index: 5;
+    padding: 10px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     --border-color: #ffd710;
+    z-index: 5;
+}
+
+nav .nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-gap: 15px;
 }
 
 nav .nav ul li a {
-    display: block;
-    margin: 1rem auto;
+    display: inline-block;
+    height: 3.5rem;
+    min-width: 54px;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
     color: var(--yellow);
-    height: 2.5rem;
-    width: 3.5rem;
     text-transform: capitalize;
     font-weight: 900;
-    border-right: 2px solid var(--border-color);
-    border-left: 2px solid var(--border-color);
+    text-align: center;
+    padding-top: 6px;
+}
+
+nav .nav ul li a:hover {
+    padding-top: 9px;
 }
 
 nav .nav ul li a.active {
     color: var(--main-bg);
     border-color: var(--main-bg);
+}
+
+nav .nav ul li a:before {
+    font-size: 1rem;
+    display: none;
 }
 
 nav .nav ul li a:hover:before,
@@ -299,18 +324,12 @@ nav .nav ul li a:focus:after {
     display: none;
 }
 
-nav .nav ul li a:before {
-    font-size: 0.8rem;
-    display: none;
-    padding-top: 0.7rem;
-}
-
 nav .nav ul li a:after {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-variant-caps: normal;
     font-variant-ligatures: normal;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
@@ -366,18 +385,15 @@ nav .nav ul li a[href="#contact"]:after {
     content: "\f095";
 }
 
+
 nav .social {
     align-self: end;
 }
 
-.social a {
-    display: inline-block;
-    font-weight: 900;
-    padding: .3rem;
-    font-size: 1.2rem;
-    color: var(--yellow);
-}
 
+nav .social {
+    display: none;
+}
 
 /* End Nav rules */
 
@@ -390,6 +406,7 @@ header {
     display: grid;
     align-content: center;
     text-align: center;
+    padding-top: 15rem;
 }
 
 header .content {
@@ -409,6 +426,10 @@ header h1 span.typed {
     text-transform: uppercase;
 }
 
+header .btn {
+    margin-bottom: 15rem;
+}
+
 header .btn:after {
     content: "\f30b";
     font-family: "Font Awesome 5 Free";
@@ -419,6 +440,11 @@ header .btn:after {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     margin-left: 1rem;
+}
+
+
+header .arrows {
+    /*    margin: 4rem auto -18rem;*/
 }
 
 .shape-rec {
@@ -492,7 +518,7 @@ main {
     display: grid;
     align-content: center;
     justify-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 /*Section General Rules*/
@@ -501,8 +527,7 @@ section {
     border-bottom: 1px solid var(--border-color);
     display: grid;
     text-align: center;
-    max-width: 90rem;
-    padding: 6rem;
+    padding: 8% 2%;
 }
 
 section > p {
@@ -588,12 +613,12 @@ section#about blockquote cite {
 
 #skills span {
     display: inline-block;
-    padding: 10px;
+    padding: 6px 9px;
     background: var(--main-color);
     color: var(--main-bg);
     margin-right: 0.5rem;
     margin-top: 0.5rem;
-    border-radius: 8px;
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 1rem;
@@ -606,7 +631,8 @@ section#about blockquote cite {
 section#services ul {
     text-align: left;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-auto-rows: minmax(24rem, 1fr);
     grid-gap: 1.5rem;
 }
 
@@ -615,20 +641,11 @@ section#services ul li {
     border: none;
     border-left: 1px solid var(--yellow);
     border-bottom-left-radius: 36%;
-    min-height: 21rem;
+    padding-bottom: 4rem;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
-}
-
-section#services ul li:hover,
-section#services ul li:focus,
-section#services ul li:active {
-    -o-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
 }
 
 section#services ul li p {
@@ -648,22 +665,17 @@ section#services ul li:last-child:after {
 #work {}
 
 .portfolio {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, minmax(18rem, 1fr));
-    grid-template-rows: auto auto repeat(5, minmax(18rem, 1fr));
+    grid-template-columns: minmax(15rem, 50rem);
+    grid-template-rows: auto auto repeat(8, minmax(25rem, 1fr));
     grid-gap: 1px;
     align-content: center;
     justify-content: center;
-    grid-template-areas: "he he he he" "p p p p" "cu cu ac ac" "ca we we pom" "ca we we pom" "ad ad ad ga" "wiki wiki wiki ga";
-}
-
-.portfolio h2 {
-    grid-area: he;
 }
 
 .portfolio p {
     margin-bottom: 3rem;
-    grid-area: p;
 }
 
 .sample {
@@ -671,6 +683,7 @@ section#services ul li:last-child:after {
     display: grid;
     align-content: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .sample:before {
@@ -689,6 +702,7 @@ section#services ul li:last-child:after {
 
 .sample .img-skill {
     z-index: 10;
+    11
 }
 
 .sample span,
@@ -740,54 +754,46 @@ section#services ul li:last-child:after {
 }
 
 .cupid {
-    grid-area: cu;
     background: url('../media/porfolio/cupied.png') top center no-repeat;
     background-size: cover;
 }
 
 .calc {
-    grid-area: ca;
     background: url('../media/porfolio/calc.png') top center no-repeat;
     background-size: cover;
 }
 
 .acme {
-    grid-area: ac;
     background: url('../media/porfolio/acme.png') center center no-repeat;
     background-size: cover;
 
 }
 
 .admin {
-    grid-area: ad;
     background: url('../media/porfolio/admin.png') top center no-repeat;
     background-size: cover;
 
 }
 
 .weather {
-    grid-area: we;
     background: url('../media/porfolio/weather.png') center center no-repeat;
     background-size: cover;
 
 }
 
 .wiki {
-    grid-area: wiki;
     background: url('../media/porfolio/wiki.png') top center no-repeat;
     background-size: cover;
 
 }
 
 .pomodoro {
-    grid-area: pom;
     background: url('../media/porfolio/pom.png') center center no-repeat;
     background-size: cover;
 
 }
 
 .game {
-    grid-area: ga;
     background: url('../media/porfolio/game.png') center center no-repeat;
     background-size: cover;
 
@@ -799,26 +805,24 @@ section#services ul li:last-child:after {
 
 /* Start contact rules */
 
-#contact {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
-
 /* Start contact form rules */
 
 .contact-form {
-    border-right: 1px solid var(--border-color);
-    padding-right: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
 }
-.contact-form h2{
+
+.contact-form h2 {
     margin-bottom: 2rem;
 }
+
 .contact-form a {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.55rem;
 }
 
 .contact-form p {
-    max-width: 65%;
+    max-width: 75%;
     margin: auto;
     line-height: 1.8;
 }
@@ -921,13 +925,10 @@ a#hd-form-close {
 /* Start Map rules */
 
 .location iframe {
-/*
-    width: 100%;
-    height: 100%;
+
+    width: 90%;
     min-height: 30rem;
-    margin: auto;
-    padding-left: 3rem;
-*/
+    margin: 2rem auto;
 }
 
 /* End Map rules */
@@ -953,90 +954,190 @@ footer ul li {
 
 /* Start Media Queries rules */
 
-@media (max-width:1400px) {
-    html, body {
-        font-size: 13px;
+@media (min-width:700px) {
+    html {
+        font-size: 12px;
     }
-    
-    header h1 {
-        font-size: 3rem;
+    /*    Start Nav Rules*/
+    nav {
+        left: 10px;
+        top: 5%;
+        padding: 25px 10px;
+        width: 65px;
+        display: grid;
+        grid-gap: 36px;
+        justify-content: center;
         text-align: center;
     }
 
-    .portfolio {
-/*        grid-template-columns: 1fr 1fr ;*/
-/*
-        grid-template-columns: minmax(13rem, 1fr) 3rem minmax(13rem, 1fr);
-*/
-        grid-template-rows: repeat(6,minamx(7rem , 1fr));
-/*        grid-auto-rows: minmax(5rem,10rem);*/
-        grid-template-areas: "he he he" " p p p" "cu cu ca " "cu cu ca" " ac we we" "ac we we" "ad ad pom" "ad ad pom" "ga wiki wiki" "ga wiki wiki";
-    }
-
-    .contact-form {
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 3rem;
-        border-right: none;
-    }
-    .location iframe{
-        padding-left: 0;
-        padding-top: 3rem;
-    }
-
-}
-
-@media (max-width:1000px) {
-/*    html{font-size: 10px;}*/
-    nav {
-        top: 10px;
-        left: 5%;
-        padding: 10px;
-        width: 90%;
-        min-height: 4.6rem;
-        min-width: 30rem;
-        grid-gap: .5rem;
-        grid-template-columns: 1fr;
-    }
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-        grid-auto-rows: 5rem;
-        grid-gap: 0.5rem;
-    }
     nav .nav ul li a {
-        padding: 3px;
-        margin: 0.6rem 0;
-        height: 3.5rem;
-        width: auto;
+        margin: 3px auto;
+        height: 37.5px;
+        width: 42.5px;
+        /*        min-width: auto;*/
         border: none;
-        border-top: 2px solid var(--border-color);
-        border-bottom: 2px solid var(--border-color);
+        border-right: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
     }
     nav .nav ul li a:before {
-        font-size: 1.1rem;
+        font-size: 12px;
+    }
+    nav .nav ul li a:after {
+        font-size: 18px;
+    }
+    nav .nav ul li a[href="#work"]:hover {
+        padding-top: 2px;
     }
 
     nav .social {
-        display: none;
+        display: block;
+    }
+    /*    End Nav Rules*/
+    /*    Start main Rules*/
+    main {
+        padding: 0 10%;
+    }
+    /*    End main Rules*/
+    /*    Start Section Rules*/
+    section {
+        padding: 5rem;
+    }
+    /*    End Section Rules*/
+    /*    Start Portfolio Rules*/
+    .portfolio {
+        grid-template-columns: 1fr minmax(2rem, 0.3fr) 1fr;
+        grid-template-rows: auto auto repeat(4, minmax(20rem, 1fr));
+        grid-template-areas: "h h h" "p p p" "cup cup acme" "adm wea wea" "pom pom calc" "ga wiki wiki";
+    }
+    .portfolio h2 {
+        grid-column: 1/-1;
+        grid-area: h;
+    }
+    .portfolio p {
+        grid-column: 1/-1;
+        grid-area: p;
+    }
+    .cupid {
+        grid-area: cup;
     }
 
+
+    .acme {
+        grid-area: acme;
+    }
+
+    .admin {
+        grid-area: adm;
+    }
+
+    .weather {
+        grid-area: wea;
+    }
+    .calc {
+        grid-area: calc;
+    }
+
+    .wiki {
+        grid-area: wiki;
+    }
+
+    .pomodoro {
+        grid-area: pom;
+    }
+
+    .game {
+        grid-area: ga;
+    }
+    /*    End Portfolio Rules*/
+    /*    Start Services Rules*/
+    section#services > p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto
+    }
+    section#services ul {
+        grid-gap: 2.5rem;
+    }
+
+    section#services ul li {
+        padding-bottom: 5rem;
+    }
+
+    section#services ul li:hover,
+    section#services ul li:focus,
+    section#services ul li:active {
+        -o-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    /*    End Services Rules*/
+}
+
+@media (min-width:1250px) {
+    html {
+        /*        font-size: 14px;*/
+    }
+    /*    Start Header Rules*/
     header h1 {
-        margin-top: 5rem;
-        font-size: 3rem;
-        text-align: center;
         height: 400px;
+        text-align: left;
+        font-size: 3rem;
     }
-    main {
-        padding: 0 4rem;
+    header .btn {
+        margin-bottom: inherit;
     }
+    /*    End Header Rules*/
+    /*    Start Section Rules*/
     section {
-        padding: 6rem;
+        padding: 5rem;
     }
+
+    /*    End Section Rules*/
+    /*    Start Skills Rules*/
+    section#skills span{
+        padding: 8px 12px;
+        font-size: 1.2rem;
+    }
+    /*    End Skills Rules*/
+    /*    Start Portfolio Rules*/
     .portfolio {
-        grid-template-columns: minmax(45rem,1fr);
-        grid-auto-rows: minmax(25rem, 1fr);
-        grid-template-areas: "he" "p" "cu" "ad" "ac" "ca" "we" "wiki" "pom" "ga";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto repeat(5, minmax(24rem, 1fr));
+        grid-template-areas: "h h h h" "p p p p" "cup cup acme acme" "calc wea wea pom" "calc wea wea pom" "adm adm adm ga" "wiki wiki wiki ga";
     }
+
+    /*    End Portfolio Rules*/
+    /*    Start Services Rules*/
+    section#services > p {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto
+    }
+    section#services ul {
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    /*    End Services Rules*/
+    /*    Start Contact Rules*/
+    Section#contact {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+        padding: 5rem 3rem;
+    }
+    section#contact p {
+        max-width: 90%;
+    }
+
+    section#contact .contact-form {
+        border: none;
+        border-right: 1px solid var(--border-color);
+    }
+    section#services iframe {
+        width: 100%;
+    }
+    /*    End Contact Rules*/
 }
 
 /* End Media Queries rules */
