@@ -75,6 +75,7 @@ console.log();
 if($(window).innerWidth() <= 750){
 $('header .content').css('margin-top',navH);
 }
+
 //Form controls
 //
 //$('#hd-form-activate').on('click', function () {
