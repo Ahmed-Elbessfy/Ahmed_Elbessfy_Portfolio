@@ -1,19 +1,3 @@
-/*global $, window, console */
-//$('document').ready(function () {
-//
-//    'user strict';
-////    $('.optionControl').click(function () {
-//        $('.colorOption').fadeToggle();
-//    });
-//
-//    var color = $('#optionbox .colorOption ul li');
-//    color.click(function () {
-//        //        $('link[href*="color"]').attr('href', $(this).attr('data-value'));
-//        $('body').attr("data-themeColor", $(this).attr('class'));
-//
-//    });
-//
-//});
 
 
 //$(window).on("load", function () {
@@ -23,6 +7,9 @@
 //
 //    });
 //});
+
+
+//Controling Active section in navbar
 $('nav .nav ul li a').click(function () {
    $('.nav a').removeClass('active'); $(this).addClass('active');
 });
@@ -36,7 +23,7 @@ $('nav .nav ul li a').click(function () {
 
 $(window).scroll(function () {
     const scrollTopVal = $(window).scrollTop();
-    console.log(scrollTopVal);
+//    console.log(scrollTopVal);
     if (scrollTopVal <= headerH) {
         $("a").removeClass('active');
         $("[href='#home']").addClass('active');
@@ -59,7 +46,7 @@ $(window).scroll(function () {
 });
 $(window).on('load',function () {
     const scrollTopVal = $(window).scrollTop();
-    console.log(scrollTopVal);
+    //console.log(scrollTopVal);
     if (scrollTopVal <= headerH) {
         $("a").removeClass('active');
         $("[href='#home']").addClass('active');
@@ -81,12 +68,13 @@ $(window).on('load',function () {
     }
 });
 
-//            //$("#scroll").click(function () {
-//            //    $("html").animate({
-//            //        scrollTop: 0
-//            //    }, 600);});
 
-
+// Give a header content margin top equals to the navbar height -- Solving issue for small screens
+const navH = $("nav").height();
+console.log();
+if($(window).innerWidth() <= 750){
+$('header .content').css('margin-top',navH);
+}
 //Form controls
 //
 //$('#hd-form-activate').on('click', function () {

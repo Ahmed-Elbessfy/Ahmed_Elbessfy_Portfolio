@@ -48,7 +48,7 @@ h3 {
 h1 {
     max-width: 40rem;
     width: 90%;
-    margin: auto;
+    margin: 3rem auto;
     font-size: 2.5rem;
     font-weight: 500;
     font-family: 'Fredericka the Great';
@@ -411,6 +411,7 @@ header {
 
 header .content {
     justify-self: center;
+    
 }
 
 header h1 {
@@ -426,10 +427,6 @@ header h1 span.typed {
     text-transform: uppercase;
 }
 
-header .btn {
-    margin-bottom: 15rem;
-}
-
 header .btn:after {
     content: "\f30b";
     font-family: "Font Awesome 5 Free";
@@ -440,11 +437,6 @@ header .btn:after {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     margin-left: 1rem;
-}
-
-
-header .arrows {
-    /*    margin: 4rem auto -18rem;*/
 }
 
 .shape-rec {
@@ -954,7 +946,7 @@ footer ul li {
 
 /* Start Media Queries rules */
 
-@media (min-width:700px) {
+@media (min-width:750px) {
     html {
         font-size: 12px;
     }
