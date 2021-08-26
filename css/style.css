@@ -751,48 +751,47 @@ section#services ul li:last-child:after {
   opacity: 1;
 }
 
-.cupid {
-  background: url('../media/porfolio/cupied.png') top center no-repeat;
-  background-size: cover;
-}
-
-.calc {
-  background: url('../media/porfolio/calc.png') top center no-repeat;
-  background-size: cover;
-}
-
-.acme {
-  background: url('../media/porfolio/acme.png') center center no-repeat;
+.markdown {
+  background: url('../media/portfolio/markdown-previewer.png') center center no-repeat;
   background-size: cover;
 
 }
 
-.admin {
-  background: url('../media/porfolio/admin.png') top center no-repeat;
+.quote {
+  background: url('../media/portfolio/random-quote-generator.png') top center no-repeat;
   background-size: cover;
 
+}
+
+.drum {
+  background: url('../media/portfolio/drum-machine.png') center center no-repeat;
+  background-size: cover;
+
+}
+
+.tourist {
+  background: url('../media/portfolio/tourist-company-vue.png') top center no-repeat;
+  background-size: cover;
+
+}
+.bday {
+  background: url('../media/portfolio/bday.png') top center no-repeat;
+  background-size: cover;
+}
+
+.skyapp {
+  background: url('../media/portfolio/skyapp.png') center center no-repeat;
+  background-size: cover;
+
+}
+
+.cupeid {
+  background: url('../media/portfolio/cupied.png') top center no-repeat;
+  background-size: cover;
 }
 
 .weather {
-  background: url('../media/porfolio/weather.png') center center no-repeat;
-  background-size: cover;
-
-}
-
-.wiki {
-  background: url('../media/porfolio/wiki.png') top center no-repeat;
-  background-size: cover;
-
-}
-
-.pomodoro {
-  background: url('../media/porfolio/pom.png') center center no-repeat;
-  background-size: cover;
-
-}
-
-.game {
-  background: url('../media/porfolio/game.png') center center no-repeat;
+  background: url('../media/portfolio/weather.png') center center no-repeat;
   background-size: cover;
 
 }
@@ -1010,9 +1009,9 @@ footer ul li {
   /*    End Section Rules*/
   /*    Start Portfolio Rules*/
   .portfolio {
-    grid-template-columns: 1fr minmax(2rem, 0.3fr) 1fr;
+    grid-template-columns: 1fr minmax(20rem, 0.3fr) 1fr;
     grid-template-rows: auto auto repeat(4, minmax(20rem, 1fr));
-    grid-template-areas: "h h h""p p p""cup cup acme""adm wea wea""pom pom calc""ga wiki wiki";
+    grid-template-areas: "h h h""p p p""mark quote quote""drum tourist bday""skyapp tourist bday""cupeid cupeid weather";
   }
 
   .portfolio h2 {
@@ -1025,37 +1024,36 @@ footer ul li {
     grid-area: p;
   }
 
-  .cupid {
-    grid-area: cup;
+  .markdown {
+    grid-area: mark;
   }
 
-
-  .acme {
-    grid-area: acme;
+  .quote {
+    grid-area: quote;
   }
 
-  .admin {
-    grid-area: adm;
+  .drum {
+    grid-area: drum;
+  }
+
+  .tourist {
+    grid-area: tourist;
+  }
+
+  .bday {
+    grid-area: bday;
+  }
+
+  .skyapp {
+    grid-area: skyapp;
   }
 
   .weather {
-    grid-area: wea;
+    grid-area: weather;
   }
 
-  .calc {
-    grid-area: calc;
-  }
-
-  .wiki {
-    grid-area: wiki;
-  }
-
-  .pomodoro {
-    grid-area: pom;
-  }
-
-  .game {
-    grid-area: ga;
+  .cupeid {
+    grid-area: cupeid;
   }
 
   /*    End Portfolio Rules*/
@@ -1120,7 +1118,8 @@ footer ul li {
   .portfolio {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto repeat(5, minmax(24rem, 1fr));
-    grid-template-areas: "h h h h""p p p p""cup cup acme acme""calc wea wea pom""calc wea wea pom""adm adm adm ga""wiki wiki wiki ga";
+    grid-template-areas: "h h h h""p p p p""mark mark quote quote""drum tourist tourist bday""drum tourist tourist bday""skyapp skyapp skyapp weather""cupeid cupeid cupeid weather";
+    /* grid-template-areas: "h h h""p p p""mark mark quote""drum tourist bday""skyapp skyapp weather""cupeid cupeid weather"; */
   }
 
   /*    End Portfolio Rules*/
