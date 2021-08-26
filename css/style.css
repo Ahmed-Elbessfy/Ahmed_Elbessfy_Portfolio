@@ -539,6 +539,10 @@ section ul li {
   padding-left: 3rem;
 }
 
+section ul li p {
+  max-width: 80%;
+}
+
 section ul li:before {
   content: "";
   position: absolute;
